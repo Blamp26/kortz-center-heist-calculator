@@ -47,7 +47,3 @@ This is an unofficial fan-made project and is not affiliated with Rockstar Games
 ## License
 
 MIT. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## Image previews
-
-Version 6.6 uses external full-size screenshots. Previews preserve the complete image with `object-fit: contain`; clicking a preview opens the original resolution. Paintings also link to the RockstarINTEL 27-painting reference gallery. Five unusable side-angle/vault thumbnails are intentionally hidden instead of being presented as clear identification photos. No image binaries are stored in this repository.

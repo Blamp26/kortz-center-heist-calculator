@@ -52,18 +52,3 @@ Therefore:
 ## Links
 
 The complete source list is stored in `data/loot.json` and shown in the calculator's **Data sources** dialog.
-
-
-## Target screenshots
-
-Target previews are loaded from external publisher/CDN URLs rather than committed to this repository. Most exhibit screenshots link to the Steam Community guide listed above; the primary-target screenshot links to Beebom. Some closely related variants use a representative family screenshot when a separate verified image was not available. External images may disappear or reject hotlinking, so the interface includes a graceful fallback.
-
-## Image reference galleries
-
-- RockstarINTEL, “All 27 New GTA Online Mansion Paintings Added With The Kortz Center Heist”: higher-quality painting reference gallery.
-- Beebom, “All GTA Online Kortz Center Heist Targets and Payouts”: target-identification reference.
-- Steam Community guide screenshots remain the directly embedded full-size external scope-out images where a separate frontal asset is not publicly exposed.
-
-The calculator does not copy image binaries into the repository.
-
-Five legacy scope-out shots that were too oblique or showed only the target label are retained as `legacyImage` metadata but are not rendered as target previews.
