@@ -52,3 +52,8 @@ Therefore:
 ## Links
 
 The complete source list is stored in `data/loot.json` and shown in the calculator's **Data sources** dialog.
+
+
+## Target screenshots
+
+Target previews are loaded from external publisher/CDN URLs rather than committed to this repository. Most exhibit screenshots link to the Steam Community guide listed above; the primary-target screenshot links to Beebom. Some closely related variants use a representative family screenshot when a separate verified image was not available. External images may disappear or reject hotlinking, so the interface includes a graceful fallback.

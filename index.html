@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Optimize Kortz Center Heist loot for crews of 1–4 players in GTA Online.">
 
   <title>Kortz Center Heist Calculator – GTA Online Loot Optimizer</title>
-  <link rel="stylesheet" href="./css/style.css?v=6.4.0">
+  <link rel="stylesheet" href="./css/style.css?v=6.5.0">
 
   <script type="application/ld+json">
   {
@@ -82,6 +82,7 @@
       </div>
 
       <div id="primaryTargetHint" class="target-hint"></div>
+      <div id="primaryPreview" class="target-preview" aria-live="polite"></div>
 
       <div class="field-row">
         <label for="primaryValue">Repeat-sale value:</label>
@@ -133,6 +134,7 @@
       </div>
 
       <div id="targetHint" class="target-hint"></div>
+      <div id="targetPreview" class="target-preview" aria-live="polite"></div>
 
       <div class="field-row">
         <label for="addValue">Value shown by Raf:</label>
@@ -241,6 +243,16 @@
     </section>
   </main>
 
+  <dialog id="imageDialog" class="image-dialog">
+    <div class="dialog-heading">
+      <h2 id="imageDialogTitle">Target preview</h2>
+      <button id="closeImageButton" type="button" aria-label="Close">×</button>
+    </div>
+    <img id="imageDialogImage" alt="">
+    <p id="imageDialogNote" class="dimmed"></p>
+    <p><a id="imageDialogSource" href="#" target="_blank" rel="noreferrer">Open image source</a></p>
+  </dialog>
+
   <dialog id="sourcesDialog">
     <div class="dialog-heading">
       <h2>Sources and assumptions</h2>
@@ -250,6 +262,6 @@
     <ul id="sourcesList" class="sources-list"></ul>
   </dialog>
 
-  <script type="module" src="./js/app.js?v=6.4.0"></script>
+  <script type="module" src="./js/app.js?v=6.5.0"></script>
 </body>
 </html>

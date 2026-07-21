@@ -1,11 +1,51 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.4.0';
+const UI_VERSION = '6.5.0';
 const state = { data: null };
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
+
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function targetPreviewMarkup(target, compact = false) {
+  if (!target?.image) {
+    return `<div class="preview-placeholder">No verified screenshot available yet.</div>`;
+  }
+  const note = target.imageNote || 'External in-game screenshot.';
+  return `
+    <button class="target-image-button ${compact ? 'compact' : ''}" type="button"
+      data-image="${escapeHtml(target.image)}" data-image-title="${escapeHtml(target.name)}"
+      data-image-source="${escapeHtml(target.imageSource || target.image)}" data-image-note="${escapeHtml(note)}"
+      aria-label="Open screenshot of ${escapeHtml(target.name)}">
+      <img src="${escapeHtml(target.image)}" alt="${escapeHtml(target.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+    </button>
+    ${compact ? '' : `<div class="preview-copy"><strong>${escapeHtml(target.name)}</strong><span>${escapeHtml(note)}</span><a href="${escapeHtml(target.imageSource || target.image)}" target="_blank" rel="noreferrer">Source</a></div>`}
+  `;
+}
+
+function renderTargetPreview(selector, target) {
+  $(selector).innerHTML = targetPreviewMarkup(target);
+}
+
+function openImageDialog(button) {
+  const dialog = $('#imageDialog');
+  $('#imageDialogTitle').textContent = button.dataset.imageTitle || 'Target preview';
+  $('#imageDialogImage').src = button.dataset.image;
+  $('#imageDialogImage').alt = button.dataset.imageTitle || 'Target screenshot';
+  $('#imageDialogNote').textContent = button.dataset.imageNote || '';
+  $('#imageDialogSource').href = button.dataset.imageSource || button.dataset.image;
+  dialog.showModal();
+}
 
 function elementValue(selector) {
   const element = $(selector);
@@ -29,9 +69,9 @@ function normalizeSearch(value) {
 
 function ensureCurrentInterface() {
   const requiredIds = [
-    'calculator', 'players', 'primaryTarget', 'primaryTargetHint', 'primaryValue', 'firstWeeklySale',
+    'calculator', 'players', 'primaryTarget', 'primaryTargetHint', 'primaryPreview', 'primaryValue', 'firstWeeklySale',
     'hardMode', 'sellPrimary', 'eliteCompleted',
-    'targetSearch', 'addCategory', 'addTarget', 'addValue', 'addQuantity', 'addRequested', 'addCrispGallery',
+    'targetSearch', 'addCategory', 'addTarget', 'targetPreview', 'addValue', 'addQuantity', 'addRequested', 'addCrispGallery',
     'addTargetButton', 'categoryReference', 'lootRows', 'selectedTable',
     'scopedEmpty', 'scopedCount', 'netTake', 'grossTake', 'recommendationList'
   ];
@@ -134,6 +174,7 @@ function syncPrimaryTarget({ overwriteValue = true } = {}) {
     ? `Current repeat-sale value ${money(currentValue)} · first weekly sale ${money(currentValue * state.data.meta.defaultPrimary.weeklyMultiplier)}.`
     : 'Enter the repeat-sale value shown on your planning board.';
   $('#primaryTargetHint').textContent = `${valueText} ${target.note || ''}`.trim();
+  renderTargetPreview('#primaryPreview', target);
 }
 
 function collectSettings() {
@@ -181,8 +222,8 @@ function createSelectedRow(item, itemState = {}) {
   row.dataset.defaultValue = String(item.value);
   row.innerHTML = `
     <td class="item-cell">
-      <strong>${item.name}</strong>
-      <span>${category.label} · ${category.bagPercent}% bag · ${item.location}</span>
+      <div class="item-with-thumb">${targetPreviewMarkup(item, true)}<div><strong>${item.name}</strong>
+      <span>${category.label} · ${category.bagPercent}% bag · ${item.location}</span></div></div>
     </td>
     <td><input data-field="value" type="number" min="0" step="500" value="${itemState.value ?? item.value}" aria-label="Value of ${item.name}"></td>
     <td><input class="quantity" data-field="quantity" type="number" min="1" max="4" step="1" value="${itemState.quantity ?? 1}" aria-label="Amount of ${item.name}"></td>
@@ -278,6 +319,7 @@ function updateTargetHint({ overwriteValue = true } = {}) {
   const item = state.data.items.find((entry) => entry.id === $('#addTarget').value);
   if (!item) {
     $('#targetHint').textContent = 'No targets match the current search and category filter.';
+    $('#targetPreview').innerHTML = '<div class="preview-placeholder">No target selected.</div>';
     if (overwriteValue) $('#addValue').value = '0';
     return;
   }
@@ -287,6 +329,7 @@ function updateTargetHint({ overwriteValue = true } = {}) {
     ? ` · observed ${money(item.valueRange[0])}–${money(item.valueRange[1])}`
     : '';
   $('#targetHint').textContent = `${category.bagPercent}% of one bag · estimate ${money(item.value)}${range} · ${item.location}`;
+  renderTargetPreview('#targetPreview', item);
 }
 
 function renderCategoryReference(data) {
@@ -349,6 +392,7 @@ function renderRecommendation(optimization) {
     const bagUnits = (totalBagPercent / 100).toFixed(2);
     const li = document.createElement('li');
     li.innerHTML = `
+      ${targetPreviewMarkup(state.data.items.find((entry) => entry.id === item.id), true)}
       <span class="route-count">${item.count}×</span>
       <span class="route-name"> ${item.name}</span>
       <span class="route-meta"> — ${bagUnits} bags · ${money(item.value * item.count)}</span>
@@ -514,6 +558,17 @@ function bindEvents() {
 
   $('#sourcesButton').addEventListener('click', () => $('#sourcesDialog').showModal());
   $('#closeSourcesButton').addEventListener('click', () => $('#sourcesDialog').close());
+  $('#closeImageButton').addEventListener('click', () => $('#imageDialog').close());
+  document.addEventListener('click', (event) => {
+    const imageButton = event.target.closest('.target-image-button');
+    if (imageButton) openImageDialog(imageButton);
+  });
+  document.addEventListener('error', (event) => {
+    if (!(event.target instanceof HTMLImageElement) || !event.target.closest('.target-image-button')) return;
+    const button = event.target.closest('.target-image-button');
+    button.classList.add('image-failed');
+    button.innerHTML = '<span>Image unavailable</span>';
+  }, true);
 }
 
 async function init() {
