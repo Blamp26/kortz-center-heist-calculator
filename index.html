@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="description" content="Free GTA Online Kortz Center Heist calculator that finds the highest-value loot combination for crews of 1–4 players.">
+  <meta name="author" content="Blamp26">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blamp26.github.io/kortz-center-heist-calculator/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kortz Center Heist Calculator">
+  <meta property="og:title" content="Kortz Center Heist Calculator – GTA Online Loot Optimizer">
+  <meta property="og:description" content="Find the highest-value Kortz Center loot combination for 1–4 players.">
+  <meta property="og:url" content="https://blamp26.github.io/kortz-center-heist-calculator/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kortz Center Heist Calculator">
+  <meta name="twitter:description" content="Optimize Kortz Center Heist loot for crews of 1–4 players in GTA Online.">
+
+  <title>Kortz Center Heist Calculator – GTA Online Loot Optimizer</title>
+  <link rel="stylesheet" href="./css/style.css?v=6.4.0">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kortz Center Heist Calculator",
+    "url": "https://blamp26.github.io/kortz-center-heist-calculator/",
+    "description": "A free GTA Online calculator that finds the highest-value Kortz Center Heist loot combination for crews of 1–4 players.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "isAccessibleForFree": true,
+    "creator": {
+      "@type": "Person",
+      "name": "Blamp26",
+      "url": "https://github.com/Blamp26"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main id="calculator" class="calculator">
+    <aside class="credits">
+      <h1>Kortz Center<br>Loot Calculator</h1>
+      <p>Created by: <a href="https://github.com/Blamp26" target="_blank" rel="noreferrer">Blamp26</a></p>
+      <p>Issues &amp; feedback: <a href="https://github.com/Blamp26/kortz-center-heist-calculator/issues" target="_blank" rel="noreferrer">GitHub</a></p>
+      <p><button id="sourcesButton" class="text-link">Data sources</button></p>
+
+      <div class="how-to">
+        <strong>How to use</strong>
+        <ol>
+          <li>Select the current primary target.</li>
+          <li>Add only the targets you scoped.</li>
+          <li>Follow the pickup order.</li>
+        </ol>
+      </div>
+    </aside>
+
+    <section class="input-column">
+      <div class="field-row">
+        <label for="hardMode">Hard mode:</label>
+        <select id="hardMode">
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <label for="firstWeeklySale">First sale this week:</label>
+        <select id="firstWeeklySale">
+          <option value="true">Yes — ×4</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <label for="primaryTarget">Primary target:</label>
+        <select id="primaryTarget"></select>
+      </div>
+
+      <div id="primaryTargetHint" class="target-hint"></div>
+
+      <div class="field-row">
+        <label for="primaryValue">Repeat-sale value:</label>
+        <input id="primaryValue" type="number" min="0" step="1250" value="481250">
+      </div>
+      <div class="field-help">The value is prefilled when known, but you can always replace it with the amount shown on your planning board.</div>
+
+      <div class="field-row">
+        <label for="sellPrimary">Sell primary target:</label>
+        <select id="sellPrimary">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <label for="players">Amount of players:</label>
+        <select id="players">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <label for="eliteCompleted">Elite Challenge:</label>
+        <select id="eliteCompleted">
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+      </div>
+
+      <h2>Scoped secondary target</h2>
+
+      <div class="field-row">
+        <label for="targetSearch">Search target:</label>
+        <input id="targetSearch" type="search" autocomplete="off" placeholder="Try silver, diamond, coquard...">
+      </div>
+
+      <div class="field-row">
+        <label for="addCategory">Category filter:</label>
+        <select id="addCategory"></select>
+      </div>
+
+      <div class="field-row">
+        <label for="addTarget">Target:</label>
+        <select id="addTarget"></select>
+      </div>
+
+      <div id="targetHint" class="target-hint"></div>
+
+      <div class="field-row">
+        <label for="addValue">Value shown by Raf:</label>
+        <input id="addValue" type="number" min="0" step="500" value="0">
+      </div>
+      <div class="field-help">Secondary-target values vary between runs. Replace the estimate with the exact value shown by Raf.</div>
+
+      <div class="field-row">
+        <label for="addQuantity">Amount found:</label>
+        <input id="addQuantity" type="number" min="1" max="4" step="1" value="1">
+      </div>
+
+      <div class="field-row">
+        <label for="addRequested">Buyer Request item:</label>
+        <select id="addRequested">
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <label for="addCrispGallery">Spawned in Crisp Gallery:</label>
+        <select id="addCrispGallery">
+          <option value="false">No</option>
+          <option value="true">Yes — requires 2 players</option>
+        </select>
+      </div>
+
+      <div class="field-help">Crisp Gallery is the locked Exhibit Level 2 room. One player holds the shutter button while another takes the loot.</div>
+
+      <button id="addTargetButton" class="button full-button" type="button">Add scoped target</button>
+
+      <h2>Secondary target reference</h2>
+      <div class="reference-wrap">
+        <table class="reference-table">
+          <thead>
+            <tr>
+              <th>Target</th>
+              <th>Value range</th>
+              <th>Avg full bag</th>
+              <th>Bag fill</th>
+            </tr>
+          </thead>
+          <tbody id="categoryReference"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="result-column">
+      <div class="calculation-lines">
+        <div>Primary target: <span id="primaryTake">$0</span></div>
+        <div>Secondary loot: <span id="secondaryTake">$0</span></div>
+        <div>Buyer Request List: <span id="buyerBonusTake">$0</span></div>
+        <div>Elite Challenge: <span id="eliteTake">$0</span></div>
+      </div>
+
+      <hr>
+      <div class="profit-line">Max possible host take: <strong id="netTake">$0</strong></div>
+      <hr>
+
+      <div class="bag-row">
+        <span>Bags sum:</span>
+        <strong id="bagUsed">0.00 / 1.00 bags</strong>
+      </div>
+      <div class="bar"><i id="bagBar"></i></div>
+      <div id="bagRemaining" class="dimmed">1.00 bags available</div>
+      <div id="buyerStatus" class="dimmed">Buyer request not completed</div>
+
+      <h2>Scoped targets: <span id="scopedCount">0</span></h2>
+      <div id="scopedEmpty" class="empty-message">No targets added yet.</div>
+      <div class="selected-wrap">
+        <table id="selectedTable" class="selected-table" hidden>
+          <thead>
+            <tr>
+              <th>Target</th>
+              <th>Value</th>
+              <th>Qty</th>
+              <th>Request</th>
+              <th>Crisp</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="lootRows"></tbody>
+        </table>
+      </div>
+
+      <div class="small-actions">
+        <button id="fillDemoButton" class="text-link" type="button">Load example</button>
+        <button id="clearLootButton" class="text-link" type="button">Clear targets</button>
+      </div>
+
+      <hr>
+      <h2>Best loot combination:</h2>
+      <div id="warnings"></div>
+      <ol id="recommendationList" class="recommendation-list"></ol>
+      <hr>
+
+      <div class="gross-line">Total heist take: <span id="grossTake">$0</span></div>
+
+      <div class="button-row">
+        <button id="resetButton" class="button" type="button">Reset settings to default</button>
+        <button id="shareButton" class="button" type="button">Copy link with settings</button>
+      </div>
+
+      <p class="properties">* Finale damage/value loss is not estimated before the run.</p>
+    </section>
+  </main>
+
+  <dialog id="sourcesDialog">
+    <div class="dialog-heading">
+      <h2>Sources and assumptions</h2>
+      <button id="closeSourcesButton" type="button" aria-label="Close">×</button>
+    </div>
+    <p>Core mechanics are cross-checked against multiple guides. Secondary-target values vary between runs, and early guide tables also disagree. Search by name, then enter the exact value shown by Raf.</p>
+    <ul id="sourcesList" class="sources-list"></ul>
+  </dialog>
+
+  <script type="module" src="./js/app.js?v=6.4.0"></script>
+</body>
+</html>

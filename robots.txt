@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blamp26.github.io/kortz-center-heist-calculator/sitemap.xml
