@@ -27,19 +27,22 @@
         "note": "Story target. It must be sold.",
         "image": "https://static.beebom.com/wp-content/uploads/2026/07/debauche-onlinegta.jpg?w=1024",
         "imageSource": "https://beebom.com/gta-online-kortz-center-heist-targets/",
-        "imageNote": "In-game screenshot; loaded from an external publisher."
+        "imageNote": "Full external screenshot. The preview now preserves the complete frame; click it for the original resolution.",
+        "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
       },
       {
         "id": "the-downfall-of-rome",
         "name": "The Downfall of Rome",
         "repeatValue": 305000,
-        "note": "Observed in-game value. You can edit it if your planning board shows a different amount."
+        "note": "Observed in-game value. You can edit it if your planning board shows a different amount.",
+        "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
       },
       {
         "id": "outcome-of-endeavour",
         "name": "The Outcome of Endeavour",
         "repeatValue": null,
-        "note": "Elitist bonus target. Enter the repeat-sale value shown on your planning board."
+        "note": "Elitist bonus target. Enter the repeat-sale value shown on your planning board.",
+        "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
       },
       {
         "id": "other-weekly-target",
@@ -88,7 +91,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/16195575926606918000/7779713CAD60D94BB36A74DD452E48B065766B52/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "cooked",
@@ -102,7 +106,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/10159804517499531019/1E0047A919E1FDE6ABBF17F80C328C365719B3C3/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "do-you-see-me",
@@ -117,7 +122,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/17714249331889242627/78101F4A948786CFFD4D7CC63675DE9F336C3C65/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "dont-forgo-blueprints",
@@ -131,7 +137,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/14071340946961570330/09F6AEF2B835CBD4AD442E0517CAC3FE5781EE76/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "explain-yourself",
@@ -146,7 +153,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/10457486371696051765/5D2A075E48FC5CEF583A5D8F7D5995DEE7B527A7/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "het-gouden-hondje",
@@ -158,9 +166,11 @@
       "sourceIds": [
         "steam-community"
       ],
-      "image": "https://images.steamusercontent.com/ugc/9581459218253724785/BC2DA6E12DB9D4C2E71D9FAD7326EDA599C79709/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "The available scope-out shot is strongly angled or does not show the artwork clearly, so it is intentionally hidden. Use the linked HD painting gallery.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/",
+      "legacyImage": "https://images.steamusercontent.com/ugc/9581459218253724785/BC2DA6E12DB9D4C2E71D9FAD7326EDA599C79709/",
+      "legacyImageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788"
     },
     {
       "id": "la-duchesse",
@@ -175,7 +185,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/15656734353207886317/8E838401211B5A0B66B641B6C12365095F4712FA/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "orange-crush",
@@ -190,7 +201,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/12660942236425370557/1F94627890F2095AF5F140E25414814E66B927A5/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "sod-off",
@@ -204,7 +216,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/15877810171613567169/9FFD38B2EB167E1B48F5CF971425C29826452B3D/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "swingset-study-lxix",
@@ -216,9 +229,11 @@
       "sourceIds": [
         "steam-community"
       ],
-      "image": "https://images.steamusercontent.com/ugc/9819578015322315509/3EA21AC9EEDBFC28CB05697EABDAB882CA0302BA/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "The available scope-out shot is strongly angled or does not show the artwork clearly, so it is intentionally hidden. Use the linked HD painting gallery.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/",
+      "legacyImage": "https://images.steamusercontent.com/ugc/9819578015322315509/3EA21AC9EEDBFC28CB05697EABDAB882CA0302BA/",
+      "legacyImageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788"
     },
     {
       "id": "the-chief",
@@ -233,7 +248,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/11315063956340422078/B3458940E5D25FEB70AE3DBCB372D06D25FA58C4/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external screenshot; click to open the original. A separate high-resolution painting gallery is linked beside the preview.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/"
     },
     {
       "id": "great-circle-back",
@@ -245,9 +261,11 @@
       "sourceIds": [
         "steam-community"
       ],
-      "image": "https://images.steamusercontent.com/ugc/15113329198670620243/016E07791F70E7DE2684960D7D60F93BCB4BC907/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "The available scope-out shot is strongly angled or does not show the artwork clearly, so it is intentionally hidden. Use the linked HD painting gallery.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/",
+      "legacyImage": "https://images.steamusercontent.com/ugc/15113329198670620243/016E07791F70E7DE2684960D7D60F93BCB4BC907/",
+      "legacyImageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788"
     },
     {
       "id": "hunter-becomes-hunted",
@@ -259,9 +277,11 @@
       "sourceIds": [
         "steam-community"
       ],
-      "image": "https://images.steamusercontent.com/ugc/13131783493389111787/72E7B8EF705F2CDD8603913EE3F24EDD58AACAAD/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "The available scope-out shot is strongly angled or does not show the artwork clearly, so it is intentionally hidden. Use the linked HD painting gallery.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/",
+      "legacyImage": "https://images.steamusercontent.com/ugc/13131783493389111787/72E7B8EF705F2CDD8603913EE3F24EDD58AACAAD/",
+      "legacyImageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788"
     },
     {
       "id": "with-friends-like-these",
@@ -273,9 +293,11 @@
       "sourceIds": [
         "steam-community"
       ],
-      "image": "https://images.steamusercontent.com/ugc/9798428808487798956/6C6AD931ECA546AEAD76CCA8529B3F77971AC718/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "The available scope-out shot is strongly angled or does not show the artwork clearly, so it is intentionally hidden. Use the linked HD painting gallery.",
+      "referenceGallery": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/",
+      "legacyImage": "https://images.steamusercontent.com/ugc/9798428808487798956/6C6AD931ECA546AEAD76CCA8529B3F77971AC718/",
+      "legacyImageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788"
     },
     {
       "id": "antique-bands",
@@ -289,7 +311,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/10670602118645587172/1A113A96EEF0B0E7892CAA27A8F4D226EB4C5155/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "antique-rings",
@@ -303,7 +326,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/16847339392219559384/C0B668A5526FC17FA1D15A861BFBE2C2B313EB76/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "art-deco-circlets",
@@ -320,7 +344,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13542322754971329094/F10C032BCEC2CB11FA15CB25465D2D9810195084/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "art-deco-rings",
@@ -334,7 +359,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13542322754971329094/F10C032BCEC2CB11FA15CB25465D2D9810195084/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "byzantine-hoops",
@@ -348,7 +374,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/17062391761068567855/BB24C72B1FBDF3C410FF09FE0561480322D186B7/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "coquard-bracelets",
@@ -362,7 +389,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/11323912884065557255/265443FCAB961842A0DBD5423A84A8E71D238C33/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "coquard-bracelet",
@@ -381,7 +409,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/10422759112048947916/FC4E3A13EAAF13C9C65DF0F021B4F540C299D1EF/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "fertility-bronze",
@@ -395,7 +424,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/9913296086941518618/043785B7E228D54BEA20F2B0B8CB4D7D533FC8FE/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "fertility-gold",
@@ -412,7 +442,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/9913296086941518618/043785B7E228D54BEA20F2B0B8CB4D7D533FC8FE/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "fertility-ivory",
@@ -426,7 +457,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13854381965910262345/8D6ECC9100BD8AD7951DD3471DDF7C59E8211650/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "fertility-silver",
@@ -448,7 +480,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/16924545486530689370/B47E794CA9BCA6844ED3F38B6476A48849F8FA1E/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "meteorite-fragment",
@@ -466,7 +499,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/9898858722653201863/8D62449193129EBBCD7B96CAF83D73E312564EB2/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "pharaonic-bangles",
@@ -480,7 +514,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/18431653431828763864/3EF63D84DA484267420E6834D7CC33914947D24A/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "venus-ivory",
@@ -494,7 +529,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/11160690343296082956/4FCC16020EBF11E6675C803AB7C19A0A21EA9615/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "dragon-egg",
@@ -508,7 +544,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/18395191334509728107/8290E10A41ACDA653E6FF3DE0304374CBAD015D6/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "forest-egg",
@@ -522,7 +559,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/14641894288123944659/8138675032EC8932BA7F238CC4A89F414A46D4DE/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "oeuf-coquard",
@@ -536,7 +574,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/17820312944260901363/BDF7981F6EB6569ED73C28B1EA523B82CCA34C48/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "oeuf-des-abimes",
@@ -553,7 +592,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/17820312944260901363/BDF7981F6EB6569ED73C28B1EA523B82CCA34C48/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "oeuf-decoratif",
@@ -573,7 +613,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/17820312944260901363/BDF7981F6EB6569ED73C28B1EA523B82CCA34C48/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "oeuf-enchante",
@@ -591,7 +632,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/18395191334509728107/8290E10A41ACDA653E6FF3DE0304374CBAD015D6/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "algernons-venus",
@@ -605,7 +647,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/14207922104987299411/7A723D661F75D66B838B8A41504CE6324A4227EB/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "aquamarine",
@@ -620,7 +663,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/9653378618870284435/17C27EDADB0BE52B3B830E917D0C6B6C9E6F31EF/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "coquard-carcanet-sapphire",
@@ -635,7 +679,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13945218084522696401/9EF736B14BF865A124ECBAC91B78728A57FEBBB9/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "coquard-carcanet-tanzanite",
@@ -650,7 +695,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13945218084522696401/9EF736B14BF865A124ECBAC91B78728A57FEBBB9/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "memento-amethyst",
@@ -669,7 +715,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13372690340876301509/ACDE50B9230AE61A2E83ECBF64C62F1BF45053CC/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "memento-diamond",
@@ -686,7 +733,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13372690340876301509/ACDE50B9230AE61A2E83ECBF64C62F1BF45053CC/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "Representative screenshot for this exhibit family from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "memento-emerald",
@@ -704,7 +752,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13372690340876301509/ACDE50B9230AE61A2E83ECBF64C62F1BF45053CC/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "perlino-andalusian",
@@ -718,7 +767,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/13480210865612872037/E547DB4FB3BDAE1098BFAEF31CCDF3E377AFAF52/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "purple-sapphire",
@@ -732,7 +782,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/9653378618870284435/17C27EDADB0BE52B3B830E917D0C6B6C9E6F31EF/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     },
     {
       "id": "yellow-topaz",
@@ -746,7 +797,8 @@
       ],
       "image": "https://images.steamusercontent.com/ugc/17816545897389633471/57EE159C667B8DED63B49E1840D966DFFAEA0884/",
       "imageSource": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "imageNote": "In-game screenshot from the linked community guide."
+      "imageNote": "Full external scope-out screenshot; click to open the original without thumbnail cropping.",
+      "referenceGallery": "https://beebom.com/gta-online-kortz-center-heist-targets/"
     }
   ],
   "sources": [
@@ -791,6 +843,12 @@
       "name": "QM Games — All Secondary Targets Locations",
       "url": "https://quoramarketing.com/all-secondary-targets-locations-in-kortz-center-heist-in-gta-5-online/",
       "scope": "Additional target variants and initial values"
+    },
+    {
+      "id": "rockstarintel-paintings",
+      "name": "RockstarINTEL — all 27 mansion paintings",
+      "url": "https://rockstarintel.com/all-27-new-gta-online-mansion-paintings-added-with-the-kortz-center-heist/",
+      "scope": "Higher-quality reference gallery for the painting collection."
     }
   ]
 }

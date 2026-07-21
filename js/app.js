@@ -1,7 +1,7 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.5.0';
+const UI_VERSION = '6.6.0';
 const state = { data: null };
 
 const $ = (selector) => document.querySelector(selector);
@@ -17,19 +17,39 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;');
 }
 
+function imageRequestUrl(url, compact = false) {
+  if (!url) return '';
+  // Steam's image endpoint supports explicit render dimensions. This keeps
+  // thumbnails light while the dialog still opens the unmodified original.
+  if (url.includes('images.steamusercontent.com/')) {
+    const joiner = url.includes('?') ? '&' : '?';
+    const size = compact ? 180 : 900;
+    return `${url}${joiner}imw=${size}&imh=${size}&ima=fit&impolicy=Letterbox&imcolor=%23101010&letterbox=true`;
+  }
+  return url;
+}
+
 function targetPreviewMarkup(target, compact = false) {
   if (!target?.image) {
-    return `<div class="preview-placeholder">No verified screenshot available yet.</div>`;
+    const gallery = target?.referenceGallery
+      ? `<a class="preview-gallery-link" href="${escapeHtml(target.referenceGallery)}" target="_blank" rel="noreferrer">Open reference gallery</a>`
+      : '';
+    return `<div class="preview-placeholder">No verified direct screenshot available.${gallery}</div>`;
   }
   const note = target.imageNote || 'External in-game screenshot.';
+  const displayedImage = imageRequestUrl(target.image, compact);
+  const galleryLink = target.referenceGallery
+    ? `<a href="${escapeHtml(target.referenceGallery)}" target="_blank" rel="noreferrer">HD gallery</a>`
+    : '';
   return `
     <button class="target-image-button ${compact ? 'compact' : ''}" type="button"
       data-image="${escapeHtml(target.image)}" data-image-title="${escapeHtml(target.name)}"
       data-image-source="${escapeHtml(target.imageSource || target.image)}" data-image-note="${escapeHtml(note)}"
-      aria-label="Open screenshot of ${escapeHtml(target.name)}">
-      <img src="${escapeHtml(target.image)}" alt="${escapeHtml(target.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      aria-label="Open full-size screenshot of ${escapeHtml(target.name)}">
+      <img src="${escapeHtml(displayedImage)}" alt="${escapeHtml(target.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      ${compact ? '' : '<span class="image-zoom-label">Open full size</span>'}
     </button>
-    ${compact ? '' : `<div class="preview-copy"><strong>${escapeHtml(target.name)}</strong><span>${escapeHtml(note)}</span><a href="${escapeHtml(target.imageSource || target.image)}" target="_blank" rel="noreferrer">Source</a></div>`}
+    ${compact ? '' : `<div class="preview-copy"><strong>${escapeHtml(target.name)}</strong><span>${escapeHtml(note)}</span><div class="preview-links"><a href="${escapeHtml(target.image)}" target="_blank" rel="noreferrer">Original image</a><a href="${escapeHtml(target.imageSource || target.image)}" target="_blank" rel="noreferrer">Source</a>${galleryLink}</div></div>`}
   `;
 }
 
