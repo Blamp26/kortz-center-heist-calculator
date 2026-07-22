@@ -1,0 +1,255 @@
+{
+  "version": "1.0.0",
+  "referenceResolution": {
+    "width": 1280,
+    "height": 720
+  },
+  "source": {
+    "videoId": "sAd7OHSPPPA",
+    "url": "https://www.youtube.com/watch?v=sAd7OHSPPPA",
+    "defaultLocalPath": "research-videos/sAd7OHSPPPA.mp4",
+    "notes": "Timestamps are based on the 1 fps preview extraction. Crops are normalized from 1280x720 and scaled to the original video resolution at extraction time."
+  },
+  "entries": [
+    {
+      "id": "la-derniere-debauche",
+      "kind": "primary",
+      "name": "La Dernière Débauche",
+      "frame": 685,
+      "timestamp": "00:11:24.000",
+      "output": "assets/images/targets/primary/la-derniere-debauche.webp",
+      "crop": {
+        "x": 500,
+        "y": 90,
+        "width": 330,
+        "height": 430
+      },
+      "quality": "B",
+      "verification": "Primary-target overlay and matching artwork."
+    },
+    {
+      "id": "canis-hominem-edit",
+      "kind": "secondary",
+      "name": "Canis Hominem Edit",
+      "frame": 848,
+      "timestamp": "00:14:07.000",
+      "output": "assets/images/targets/secondary/paintings/canis-hominem-edit.webp",
+      "crop": {
+        "x": 195,
+        "y": 90,
+        "width": 370,
+        "height": 535
+      },
+      "quality": "A",
+      "verification": "Museum plaque is readable in the source frame."
+    },
+    {
+      "id": "orange-crush",
+      "kind": "secondary",
+      "name": "Orange Crush",
+      "frame": 868,
+      "timestamp": "00:14:27.000",
+      "output": "assets/images/targets/secondary/paintings/orange-crush.webp",
+      "crop": {
+        "x": 335,
+        "y": 70,
+        "width": 590,
+        "height": 560
+      },
+      "quality": "A",
+      "verification": "Museum plaque is readable in the source frame."
+    },
+    {
+      "id": "the-chief",
+      "kind": "secondary",
+      "name": "The Chief",
+      "frame": 881,
+      "timestamp": "00:14:40.000",
+      "output": "assets/images/targets/secondary/paintings/the-chief.webp",
+      "crop": {
+        "x": 395,
+        "y": 75,
+        "width": 405,
+        "height": 610
+      },
+      "quality": "A",
+      "verification": "Museum plaque is readable in the source frame."
+    },
+    {
+      "id": "la-duchesse",
+      "kind": "secondary",
+      "name": "La Duchesse",
+      "frame": 990,
+      "timestamp": "00:16:29.000",
+      "output": "assets/images/targets/secondary/paintings/la-duchesse.webp",
+      "crop": {
+        "x": 545,
+        "y": 135,
+        "width": 225,
+        "height": 260
+      },
+      "quality": "B",
+      "verification": "Artwork matched to the named reference; local frame selected for clarity."
+    },
+    {
+      "id": "dont-forgo-blueprints",
+      "kind": "secondary",
+      "name": "Don't Forgo These Blueprints",
+      "frame": 1177,
+      "timestamp": "00:19:36.000",
+      "output": "assets/images/targets/secondary/paintings/dont-forgo-blueprints.webp",
+      "crop": {
+        "x": 365,
+        "y": 95,
+        "width": 390,
+        "height": 500
+      },
+      "quality": "A",
+      "verification": "Museum plaque is readable in the source frame."
+    },
+    {
+      "id": "art-deco-circlets",
+      "kind": "secondary",
+      "name": "Art Deco Circlets",
+      "frame": 1118,
+      "timestamp": "00:18:37.000",
+      "output": "assets/images/targets/secondary/small-exhibits/art-deco-circlets.webp",
+      "crop": {
+        "x": 555,
+        "y": 230,
+        "width": 350,
+        "height": 185
+      },
+      "quality": "B",
+      "verification": "Target sequence confirmed by the following in-game scope notification."
+    },
+    {
+      "id": "venus-ivory",
+      "kind": "secondary",
+      "name": "Venus d'Algernon (Ivory)",
+      "frame": 1122,
+      "timestamp": "00:18:41.000",
+      "output": "assets/images/targets/secondary/small-exhibits/venus-ivory.webp",
+      "crop": {
+        "x": 515,
+        "y": 105,
+        "width": 205,
+        "height": 250
+      },
+      "quality": "B",
+      "verification": "Target sequence and the subsequent in-game scope notification identify the ivory Venus."
+    },
+    {
+      "id": "meteorite-fragment",
+      "kind": "secondary",
+      "name": "Meteorite Fragment",
+      "frame": 1133,
+      "timestamp": "00:18:52.000",
+      "output": "assets/images/targets/secondary/small-exhibits/meteorite-fragment.webp",
+      "crop": {
+        "x": 365,
+        "y": 205,
+        "width": 545,
+        "height": 320
+      },
+      "quality": "A",
+      "verification": "Target sequence confirmed by the subsequent in-game scope notification."
+    },
+    {
+      "id": "fertility-bronze",
+      "kind": "secondary",
+      "name": "Fertility Statue (Bronze)",
+      "frame": 1159,
+      "timestamp": "00:19:18.000",
+      "output": "assets/images/targets/secondary/small-exhibits/fertility-bronze.webp",
+      "crop": {
+        "x": 380,
+        "y": 175,
+        "width": 390,
+        "height": 310
+      },
+      "quality": "B",
+      "verification": "Target sequence confirmed by the subsequent in-game scope notification."
+    },
+    {
+      "id": "coquard-bracelets",
+      "kind": "secondary",
+      "name": "Coquard Bracelets",
+      "frame": 1188,
+      "timestamp": "00:19:47.000",
+      "output": "assets/images/targets/secondary/small-exhibits/coquard-bracelets.webp",
+      "crop": {
+        "x": 430,
+        "y": 190,
+        "width": 500,
+        "height": 330
+      },
+      "quality": "B",
+      "verification": "Target sequence confirmed by the subsequent in-game scope notification."
+    },
+    {
+      "id": "coquard-carcanet-tanzanite",
+      "kind": "secondary",
+      "name": "Coquard Carcanet (Tanzanite)",
+      "frame": 1205,
+      "timestamp": "00:20:04.000",
+      "output": "assets/images/targets/secondary/reinforced-displays/coquard-carcanet-tanzanite.webp",
+      "crop": {
+        "x": 0,
+        "y": 110,
+        "width": 280,
+        "height": 430
+      },
+      "quality": "A",
+      "verification": "Target sequence and notification list identify the Tanzanite carcanet."
+    },
+    {
+      "id": "oeuf-des-abimes",
+      "kind": "secondary",
+      "name": "Œuf de Coquard des abîmes",
+      "frame": 1215,
+      "timestamp": "00:20:14.000",
+      "output": "assets/images/targets/secondary/coquard-eggs/oeuf-des-abimes.webp",
+      "crop": {
+        "x": 470,
+        "y": 180,
+        "width": 500,
+        "height": 370
+      },
+      "quality": "A",
+      "verification": "Target sequence confirmed by the subsequent in-game scope notification."
+    },
+    {
+      "id": "byzantine-hoops",
+      "kind": "secondary",
+      "name": "Byzantine Hoops",
+      "frame": 1288,
+      "timestamp": "00:21:27.000",
+      "output": "assets/images/targets/secondary/small-exhibits/byzantine-hoops.webp",
+      "crop": {
+        "x": 0,
+        "y": 205,
+        "width": 430,
+        "height": 340
+      },
+      "quality": "B",
+      "verification": "Display plaque and subsequent in-game scope notification identify the hoops."
+    },
+    {
+      "id": "oeuf-enchante",
+      "kind": "secondary",
+      "name": "Œuf de Coquard enchanté",
+      "frame": 1295,
+      "timestamp": "00:21:34.000",
+      "output": "assets/images/targets/secondary/coquard-eggs/oeuf-enchante.webp",
+      "crop": {
+        "x": 520,
+        "y": 210,
+        "width": 550,
+        "height": 350
+      },
+      "quality": "A",
+      "verification": "Target sequence confirmed by the subsequent in-game scope notification."
+    }
+  ]
+}
