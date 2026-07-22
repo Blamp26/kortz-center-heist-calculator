@@ -57,3 +57,13 @@ Target images are stored as local project files, not external links.
 - Only set `status` to `approved` after the image has been manually verified
 
 The UI will automatically show local previews and thumbnails when an approved image path exists in the manifest.
+
+## First verified secondary-image extraction batch
+
+The repository includes `tools/extract-approved-target-images.ps1` and `data/image-extraction-map.json`. With the source video stored at `research-videos/sAd7OHSPPPA.mp4`, run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\extract-approved-target-images.ps1
+```
+
+This generates 14 local WebP secondary-target images, removes unused primary-target previews, and updates `data/image-manifest.json`.

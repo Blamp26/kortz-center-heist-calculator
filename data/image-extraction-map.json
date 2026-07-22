@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "referenceResolution": {
     "width": 1280,
     "height": 720
@@ -11,22 +11,6 @@
     "notes": "Timestamps are based on the 1 fps preview extraction. Crops are normalized from 1280x720 and scaled to the original video resolution at extraction time."
   },
   "entries": [
-    {
-      "id": "la-derniere-debauche",
-      "kind": "primary",
-      "name": "La Dernière Débauche",
-      "frame": 685,
-      "timestamp": "00:11:24.000",
-      "output": "assets/images/targets/primary/la-derniere-debauche.webp",
-      "crop": {
-        "x": 500,
-        "y": 90,
-        "width": 330,
-        "height": 430
-      },
-      "quality": "B",
-      "verification": "Primary-target overlay and matching artwork."
-    },
     {
       "id": "canis-hominem-edit",
       "kind": "secondary",
@@ -251,5 +235,6 @@
       "quality": "A",
       "verification": "Target sequence confirmed by the subsequent in-game scope notification."
     }
-  ]
+  ],
+  "notes": "Verified secondary-target image extraction map. Primary-target images are intentionally excluded from the interface."
 }

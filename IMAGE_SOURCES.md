@@ -1,6 +1,6 @@
 # Target image sources
 
-This file tracks the first manually verified local-image extraction batch.
+This file tracks the first manually verified secondary-image extraction batch.
 
 Source video: [GTA Series Videos — Kortz Center scope-out footage](https://www.youtube.com/watch?v=sAd7OHSPPPA)
 
@@ -8,7 +8,6 @@ The final WebP files are extracted locally from the original downloaded video. T
 
 | Target ID | Target | Timestamp | Preview frame | Quality | Verification |
 |---|---|---:|---:|:---:|---|
-| `la-derniere-debauche` | La Dernière Débauche | `00:11:24.000` | `000685.jpg` | B | Primary-target overlay and matching artwork. |
 | `canis-hominem-edit` | Canis Hominem Edit | `00:14:07.000` | `000848.jpg` | A | Museum plaque is readable in the source frame. |
 | `orange-crush` | Orange Crush | `00:14:27.000` | `000868.jpg` | A | Museum plaque is readable in the source frame. |
 | `the-chief` | The Chief | `00:14:40.000` | `000881.jpg` | A | Museum plaque is readable in the source frame. |
@@ -32,6 +31,6 @@ Run from the repository root:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\extract-approved-target-images.ps1
 ```
 
-The script reads `data/image-extraction-map.json`, scales the crops to the original video resolution, writes local WebP files, and marks only successfully generated files as `approved` in `data/image-manifest.json`.
+The script reads `data/image-extraction-map.json`, scales the crops to the original video resolution, writes local WebP files, and removes unused primary-target images and marks only successfully generated secondary files as `approved` in `data/image-manifest.json`.
 
 These screenshots come from third-party gameplay footage. Review attribution and usage requirements before wider redistribution.

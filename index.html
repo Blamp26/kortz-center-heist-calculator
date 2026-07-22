@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Optimize Kortz Center Heist loot for crews of 1–4 players in GTA Online.">
 
   <title>Kortz Center Heist Calculator – GTA Online Loot Optimizer</title>
-  <link rel="stylesheet" href="./css/style.css?v=6.8.0">
+  <link rel="stylesheet" href="./css/style.css?v=6.10.0">
 
   <script type="application/ld+json">
   {
@@ -84,14 +84,6 @@
 
       <div id="primaryTargetHint" class="target-hint"></div>
 
-      <div id="primaryPreview" class="target-preview is-empty">
-        <div class="target-preview-image-wrap" hidden><img id="primaryPreviewImage" class="target-preview-image" alt=""></div>
-        <div class="target-preview-body">
-          <strong id="primaryPreviewTitle">Primary target image</strong>
-          <p id="primaryPreviewText">No approved local image yet.</p>
-          <p id="primaryPreviewMeta" class="preview-meta"></p>
-        </div>
-      </div>
 
       <div class="field-row">
         <label for="primaryValue">Repeat-sale value:</label>
@@ -145,7 +137,10 @@
       <div id="targetHint" class="target-hint"></div>
 
       <div id="pickerPreview" class="target-preview is-empty">
-        <div class="target-preview-image-wrap" hidden><img id="pickerPreviewImage" class="target-preview-image" alt=""></div>
+        <button class="target-preview-image-wrap image-zoom-button" type="button" hidden data-image-zoom>
+          <img id="pickerPreviewImage" class="target-preview-image" alt="">
+          <span class="zoom-hint">Click to enlarge</span>
+        </button>
         <div class="target-preview-body">
           <strong id="pickerPreviewTitle">Scoped target image</strong>
           <p id="pickerPreviewText">No approved local image yet.</p>
@@ -260,6 +255,17 @@
     </section>
   </main>
 
+  <dialog id="imageZoomDialog" class="image-zoom-dialog">
+    <div class="image-zoom-heading">
+      <h2 id="imageZoomTitle">Target image</h2>
+      <button id="closeImageZoomButton" type="button" aria-label="Close enlarged image">×</button>
+    </div>
+    <div class="image-zoom-stage">
+      <img id="imageZoomImage" alt="">
+    </div>
+    <p id="imageZoomMeta" class="image-zoom-meta"></p>
+  </dialog>
+
   <dialog id="sourcesDialog">
     <div class="dialog-heading">
       <h2>Sources and assumptions</h2>
@@ -269,6 +275,6 @@
     <ul id="sourcesList" class="sources-list"></ul>
   </dialog>
 
-  <script type="module" src="./js/app.js?v=6.8.0"></script>
+  <script type="module" src="./js/app.js?v=6.10.0"></script>
 </body>
 </html>

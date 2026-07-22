@@ -1,33 +1,33 @@
 {
-    "version":  "1.1.0",
-    "notes":  "Local target image manifest. Entries marked approved were generated from the verified extraction map.",
+    "version":  "1.2.0",
+    "notes":  "Local secondary-target image manifest. Primary-target images are intentionally not used.",
     "primaryTargets":  {
                            "la-derniere-debauche":  {
                                                         "name":  "La Dernière Débauche",
-                                                        "image":  "./assets/images/targets/primary/la-derniere-debauche.webp",
-                                                        "status":  "approved",
+                                                        "image":  "",
+                                                        "status":  "not-used",
                                                         "suggestedPath":  "./assets/images/targets/primary/la-derniere-debauche.webp",
-                                                        "sourceVideo":  "https://www.youtube.com/watch?v=sAd7OHSPPPA",
-                                                        "timestamp":  "00:11:24.000",
-                                                        "notes":  "Local 4K extraction. Frame 685. Quality B. Primary-target overlay and matching artwork."
+                                                        "sourceVideo":  "",
+                                                        "timestamp":  "",
+                                                        "notes":  "Primary-target images are intentionally not displayed because the planning board already identifies the active painting."
                                                     },
                            "the-downfall-of-rome":  {
                                                         "name":  "The Downfall of Rome",
                                                         "image":  "",
-                                                        "status":  "missing",
+                                                        "status":  "not-used",
                                                         "suggestedPath":  "./assets/images/targets/primary/the-downfall-of-rome.webp",
                                                         "sourceVideo":  "",
                                                         "timestamp":  "",
-                                                        "notes":  "Fill after manually approving a high-quality local image."
+                                                        "notes":  "Primary-target images are intentionally not displayed because the planning board already identifies the active painting."
                                                     },
                            "outcome-of-endeavour":  {
                                                         "name":  "The Outcome of Endeavour",
                                                         "image":  "",
-                                                        "status":  "missing",
+                                                        "status":  "not-used",
                                                         "suggestedPath":  "./assets/images/targets/primary/outcome-of-endeavour.webp",
                                                         "sourceVideo":  "",
                                                         "timestamp":  "",
-                                                        "notes":  "Fill after manually approving a high-quality local image."
+                                                        "notes":  "Primary-target images are intentionally not displayed because the planning board already identifies the active painting."
                                                     },
                            "other-weekly-target":  {
                                                        "name":  "Other weekly painting",
@@ -36,7 +36,7 @@
                                                        "suggestedPath":  "",
                                                        "sourceVideo":  "",
                                                        "timestamp":  "",
-                                                       "notes":  "Technical placeholder for unknown future weekly paintings. Leave without an image."
+                                                       "notes":  "Technical placeholder for unknown future weekly paintings."
                                                    }
                        },
     "secondaryTargets":  {

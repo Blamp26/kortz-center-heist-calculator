@@ -42,6 +42,24 @@ if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) { throw "Image m
 $map = Get-Content -LiteralPath $mapPath -Raw -Encoding UTF8 | ConvertFrom-Json
 $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
 
+# Primary-target pictures are intentionally not used in the calculator.
+$primaryImageDirectory = Join-Path $repoRoot 'assets\images\targets\primary'
+if (Test-Path -LiteralPath $primaryImageDirectory -PathType Container) {
+    Get-ChildItem -LiteralPath $primaryImageDirectory -File -Filter '*.webp' | Remove-Item -Force
+}
+foreach ($property in $manifest.primaryTargets.PSObject.Properties) {
+    $record = $property.Value
+    $record.image = ''
+    $record.status = if ($property.Name -eq 'other-weekly-target') { 'placeholder' } else { 'not-used' }
+    $record.sourceVideo = ''
+    $record.timestamp = ''
+    $record.notes = if ($property.Name -eq 'other-weekly-target') {
+        'Technical placeholder for unknown future weekly paintings.'
+    } else {
+        'Primary-target images are intentionally not displayed because the planning board already identifies the active painting.'
+    }
+}
+
 $probeOutput = & ffprobe -v error -select_streams 'v:0' -show_entries 'stream=width,height' -of json "$VideoPath"
 if ($LASTEXITCODE -ne 0) { throw 'ffprobe could not read the source video.' }
 $probe = $probeOutput | ConvertFrom-Json
@@ -54,13 +72,14 @@ $referenceHeight = [double]$map.referenceResolution.height
 
 Write-Host "Source: $VideoPath"
 Write-Host "Resolution: ${sourceWidth}x${sourceHeight}"
-Write-Host "Targets in this approved batch: $($map.entries.Count)"
+Write-Host "Secondary targets in this approved batch: $($map.entries.Count)"
 Write-Host ''
 
 $completed = New-Object System.Collections.Generic.List[string]
 foreach ($entry in $map.entries) {
     $relativeOutput = [string]$entry.output
-    $outputPath = Join-Path $repoRoot ($relativeOutput -replace '/', '\')
+    $localRelativeOutput = $relativeOutput.Replace('/', [string][IO.Path]::DirectorySeparatorChar)
+    $outputPath = Join-Path $repoRoot $localRelativeOutput
     $outputDirectory = Split-Path -Parent $outputPath
     New-Item -ItemType Directory -Force -Path $outputDirectory | Out-Null
 
@@ -80,8 +99,8 @@ foreach ($entry in $map.entries) {
         Write-Host "Keeping existing file for $($entry.name)"
     }
 
-    if ([string]$entry.kind -eq 'primary') { $record = $manifest.primaryTargets.([string]$entry.id) }
-    else { $record = $manifest.secondaryTargets.([string]$entry.id) }
+    if ([string]$entry.kind -ne 'secondary') { throw "Only secondary targets are supported by this image workflow: $($entry.id)" }
+    $record = $manifest.secondaryTargets.([string]$entry.id)
     if ($null -eq $record) { throw "Target $($entry.id) is missing from data/image-manifest.json" }
 
     $record.image = './' + $relativeOutput.Replace('\', '/')
@@ -92,16 +111,16 @@ foreach ($entry in $map.entries) {
     $completed.Add([string]$entry.id)
 }
 
-$manifest.version = '1.1.0'
-$manifest.notes = 'Local target image manifest. Entries marked approved were generated from the verified extraction map.'
+$manifest.version = '1.2.0'
+$manifest.notes = 'Local secondary-target image manifest. Primary-target images are intentionally not used.'
 $manifestJson = $manifest | ConvertTo-Json -Depth 20
 [System.IO.File]::WriteAllText($manifestPath, $manifestJson + [Environment]::NewLine, [System.Text.UTF8Encoding]::new($false))
 
 Write-Host ''
-Write-Host "Completed: $($completed.Count) local target images"
+Write-Host "Completed: $($completed.Count) local secondary-target images"
 Write-Host 'Updated: data\image-manifest.json'
 Write-Host ''
 Write-Host 'Next commands:'
 Write-Host '  git add assets/images/targets data/image-manifest.json data/image-extraction-map.json IMAGE_SOURCES.md tools'
-Write-Host '  git commit -m "Add first verified local target images"'
+Write-Host '  git commit -m "Add secondary image zoom and remove primary previews"'
 Write-Host '  git push'

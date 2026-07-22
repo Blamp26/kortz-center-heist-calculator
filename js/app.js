@@ -1,7 +1,7 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.8.0';
+const UI_VERSION = '6.10.0';
 const state = { data: null, imageManifest: null };
 
 const $ = (selector) => document.querySelector(selector);
@@ -25,10 +25,6 @@ function escapeHtml(value) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
-}
-
-function getPrimaryImageEntry(id) {
-  return state.imageManifest?.primaryTargets?.[id] || null;
 }
 
 function getSecondaryImageEntry(id) {
@@ -64,29 +60,64 @@ function renderPreview(baseId, title, description, entry) {
     img.src = entry.image;
     img.alt = title;
     imgWrap.hidden = false;
+    imgWrap.dataset.imageSrc = entry.image;
+    imgWrap.dataset.imageTitle = title;
+    imgWrap.dataset.imageMeta = previewMetaText(entry);
     box.classList.remove('is-empty');
   } else {
     img.removeAttribute('src');
     img.alt = '';
     imgWrap.hidden = true;
+    delete imgWrap.dataset.imageSrc;
+    delete imgWrap.dataset.imageTitle;
+    delete imgWrap.dataset.imageMeta;
     box.classList.add('is-empty');
   }
 }
 
 function imageThumbMarkup(entry, alt) {
   if (!hasApprovedImage(entry)) return '';
-  return `<img class="target-thumb" src="${escapeHtml(entry.image)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">`;
+  const meta = previewMetaText(entry);
+  return `
+    <button
+      class="image-zoom-button target-thumb-button"
+      type="button"
+      data-image-zoom
+      data-image-src="${escapeHtml(entry.image)}"
+      data-image-title="${escapeHtml(alt)}"
+      data-image-meta="${escapeHtml(meta)}"
+      aria-label="Enlarge image of ${escapeHtml(alt)}"
+      title="Click to enlarge"
+    >
+      <img class="target-thumb" src="${escapeHtml(entry.image)}" alt="" loading="lazy" decoding="async">
+    </button>`;
+}
+
+function openImageZoom(trigger) {
+  const src = trigger.dataset.imageSrc;
+  if (!src) return;
+  const title = trigger.dataset.imageTitle || 'Target image';
+  const meta = trigger.dataset.imageMeta || '';
+  const dialog = $('#imageZoomDialog');
+  $('#imageZoomImage').src = src;
+  $('#imageZoomImage').alt = title;
+  $('#imageZoomTitle').textContent = title;
+  $('#imageZoomMeta').textContent = meta;
+  dialog.showModal();
+}
+
+function closeImageZoom() {
+  const dialog = $('#imageZoomDialog');
+  if (dialog.open) dialog.close();
+  $('#imageZoomImage').removeAttribute('src');
 }
 
 function updateImageLibraryStatus() {
   const node = document.getElementById('imageLibraryStatus');
   if (!node || !state.imageManifest) return;
-  const allEntries = [
-    ...Object.values(state.imageManifest.primaryTargets || {}),
-    ...Object.values(state.imageManifest.secondaryTargets || {}),
-  ].filter((entry) => entry.status !== 'placeholder');
+  const allEntries = Object.values(state.imageManifest.secondaryTargets || {});
   const approved = allEntries.filter((entry) => entry.status === 'approved' && entry.image).length;
-  node.textContent = `Image library: ${approved}/${allEntries.length} approved local files`;
+  node.textContent = `Secondary images: ${approved}/${allEntries.length} approved local files`;
 }
 
 function normalizeSearch(value) {
@@ -206,7 +237,6 @@ function syncPrimaryTarget({ overwriteValue = true } = {}) {
     ? `Current repeat-sale value ${money(currentValue)} · first weekly sale ${money(currentValue * state.data.meta.defaultPrimary.weeklyMultiplier)}.`
     : 'Enter the repeat-sale value shown on your planning board.';
   $('#primaryTargetHint').textContent = `${valueText} ${target.note || ''}`.trim();
-  renderPreview('primaryPreview', target.name, target.note || 'No approved local image yet.', getPrimaryImageEntry(target.id));
 }
 
 function collectSettings() {
@@ -525,6 +555,19 @@ function addPickerTarget() {
 }
 
 function bindEvents() {
+  document.addEventListener('click', (event) => {
+    const zoomTrigger = event.target.closest('[data-image-zoom]');
+    if (zoomTrigger) {
+      event.preventDefault();
+      openImageZoom(zoomTrigger);
+    }
+  });
+
+  $('#closeImageZoomButton').addEventListener('click', closeImageZoom);
+  $('#imageZoomDialog').addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) closeImageZoom();
+  });
+
   document.addEventListener('input', (event) => {
     if (event.target.id === 'targetSearch') {
       syncTargetOptions();
