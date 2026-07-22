@@ -1,7 +1,7 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.10.0';
+const UI_VERSION = '6.11.0';
 const state = { data: null, imageManifest: null };
 
 const $ = (selector) => document.querySelector(selector);
@@ -117,7 +117,7 @@ function updateImageLibraryStatus() {
   if (!node || !state.imageManifest) return;
   const allEntries = Object.values(state.imageManifest.secondaryTargets || {});
   const approved = allEntries.filter((entry) => entry.status === 'approved' && entry.image).length;
-  node.textContent = `Secondary images: ${approved}/${allEntries.length} approved local files`;
+  node.textContent = `Secondary images: ${approved}/${allEntries.length} approved local files · pool still being verified`;
 }
 
 function normalizeSearch(value) {

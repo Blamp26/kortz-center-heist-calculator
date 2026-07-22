@@ -544,6 +544,30 @@ hr {
   font-size: 12px;
 }
 
+.warning-box {
+  margin-top: 18px;
+  padding: 10px 12px;
+  border: 1px solid #51442a;
+  background: #211c14;
+  color: #f0d9a6;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.warning-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffe3a9;
+}
+
+.warning-box p {
+  margin: 0;
+}
+
+.warning-box code {
+  color: #fff;
+}
+
 .target-preview {
   display: grid;
   grid-template-columns: 112px minmax(0, 1fr);

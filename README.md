@@ -18,6 +18,10 @@ No installation, account, or download is required. The calculator runs entirely 
 - Supports editable target values so the calculation can match Raf's exact scope-out message.
 - Saves settings in the browser and creates shareable calculation links.
 
+## Loot pool status
+
+The secondary-target database is still being verified from community guides, user captures, and future GTA V text extraction. Some targets may still be missing, renamed, or using provisional default values. Always prefer the exact value shown by Raf in-game when adding a scoped target.
+
 ## How to use
 
 1. Select the current primary target and enter the value shown on the planning board.

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Kortz Center Heist Calculator",
-    "updated": "2026-07-21",
+    "updated": "2026-07-22",
     "bagCapacityPerPlayer": 100,
     "buyerRequestBonus": 50000,
     "eliteBonus": {
@@ -17,9 +17,10 @@
     "notes": [
       "The primary target receives the weekly multiplier only on the first sale of the weekly cycle.",
       "Hard mode increases the primary-target payout by approximately 10%.",
-      "Secondary-target values vary between runs. The exact value shown by Raf takes priority over every guide estimate."
+      "Secondary-target values vary between runs. The exact value shown by Raf takes priority over every guide estimate.",
+      "The secondary-loot pool is still being verified from community guides and in-game captures. Some targets may still be missing, renamed, or estimated until the GTA V localization files are checked."
     ],
-"primaryTargets": [
+    "primaryTargets": [
       {
         "id": "la-derniere-debauche",
         "name": "La Dernière Débauche",
@@ -417,17 +418,6 @@
       ]
     },
     {
-      "id": "forest-egg",
-      "name": "Forest Egg Coquard",
-      "category": "egg",
-      "value": 60000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
       "id": "oeuf-coquard",
       "name": "Œuf de Coquard",
       "category": "egg",
@@ -485,14 +475,15 @@
       ]
     },
     {
-      "id": "algernons-venus",
-      "name": "Algernon's Venus",
-      "category": "glass",
-      "value": 110000,
-      "location": "Display case",
-      "sourceConfidence": "guide",
+      "id": "forest-egg",
+      "name": "Œuf de Coquard verdoyant",
+      "category": "egg",
+      "value": 60000,
+      "location": "Gallery",
+      "sourceConfidence": "user-photo",
       "sourceIds": [
-        "steam-community"
+        "steam-community",
+        "user-photo-batch"
       ]
     },
     {
@@ -506,6 +497,18 @@
         "qm-games",
         "beebom"
       ]
+    },
+    {
+      "id": "coquard-carcanet-imperial-topaz",
+      "name": "Coquard Carcanet (Imperial Topaz)",
+      "category": "glass",
+      "value": 102500,
+      "location": "Display case",
+      "sourceConfidence": "provisional",
+      "sourceIds": [
+        "user-photo-batch"
+      ],
+      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
     },
     {
       "id": "coquard-carcanet-sapphire",
@@ -530,6 +533,30 @@
         "qm-games",
         "beebom"
       ]
+    },
+    {
+      "id": "gray-spinel-gemstone",
+      "name": "Gray Spinel Gemstone",
+      "category": "glass",
+      "value": 92500,
+      "location": "Display case",
+      "sourceConfidence": "provisional",
+      "sourceIds": [
+        "user-photo-batch"
+      ],
+      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
+    },
+    {
+      "id": "marble-sabino-criollo",
+      "name": "Marble Sabino Criollo",
+      "category": "glass",
+      "value": 90000,
+      "location": "Display case",
+      "sourceConfidence": "provisional",
+      "sourceIds": [
+        "user-photo-batch"
+      ],
+      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
     },
     {
       "id": "memento-amethyst",
@@ -577,6 +604,18 @@
       ]
     },
     {
+      "id": "memento-ruby",
+      "name": "Memento Non Mori (Ruby)",
+      "category": "glass",
+      "value": 92500,
+      "location": "Display case",
+      "sourceConfidence": "provisional",
+      "sourceIds": [
+        "community-guide"
+      ],
+      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
+    },
+    {
       "id": "perlino-andalusian",
       "name": "Perlino Andalusian",
       "category": "glass",
@@ -596,6 +635,18 @@
       "sourceConfidence": "guide",
       "sourceIds": [
         "steam-community"
+      ]
+    },
+    {
+      "id": "algernons-venus",
+      "name": "Venus d’Algernon (Marble)",
+      "category": "glass",
+      "value": 110000,
+      "location": "Display case",
+      "sourceConfidence": "user-photo",
+      "sourceIds": [
+        "steam-community",
+        "user-photo-batch"
       ]
     },
     {
