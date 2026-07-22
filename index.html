@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Optimize Kortz Center Heist loot for crews of 1–4 players in GTA Online.">
 
   <title>Kortz Center Heist Calculator – GTA Online Loot Optimizer</title>
-  <link rel="stylesheet" href="./css/style.css?v=6.11.1">
+  <link rel="stylesheet" href="./css/style.css?v=6.12.0">
 
   <script type="application/ld+json">
   {
@@ -61,7 +61,7 @@
 
       <div class="warning-box">
         <strong>Loot pool warning</strong>
-        <p>The secondary-loot list is still being verified from community guides and user captures. Some targets may still be missing, renamed, or have provisional default values until the GTA V <code>.gxt2</code> text files are checked.</p>
+        <p>All 64 secondary-target names are verified from the Kortz scoping script and the English <code>global.gxt2</code>. Default values, bag fill, cutter requirements, and locations are still provisional until live tunables and in-game observations are verified.</p>
       </div>
     </aside>
 
@@ -157,7 +157,7 @@
         <label for="addValue">Value shown by Raf:</label>
         <input id="addValue" type="number" min="0" step="500" value="0">
       </div>
-      <div class="field-help">Secondary-target values vary between runs. Replace the estimate with the exact value shown by Raf. Newly added targets use provisional defaults until the final text dump is verified.</div>
+      <div class="field-help">Secondary-target values vary between runs. Replace the estimate with the exact value shown by Raf. Script-verified targets without a proven default start at $0.</div>
 
       <div class="field-row">
         <label for="addQuantity">Amount found:</label>
@@ -276,10 +276,10 @@
       <h2>Sources and assumptions</h2>
       <button id="closeSourcesButton" type="button" aria-label="Close">×</button>
     </div>
-    <p>Core mechanics are cross-checked against multiple guides. Secondary-target values vary between runs, and early guide tables also disagree. Search by name, then enter the exact value shown by Raf.</p>
+    <p>All 64 secondary-target names are verified from the game script and English localization. Values still vary between runs, and early guide tables disagree, so enter the exact value shown by Raf.</p>
     <ul id="sourcesList" class="sources-list"></ul>
   </dialog>
 
-  <script type="module" src="./js/app.js?v=6.10.0"></script>
+  <script type="module" src="./js/app.js?v=6.12.0"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.11.1';
+const UI_VERSION = '6.12.0';
 const state = { data: null, imageManifest: null };
 
 const $ = (selector) => document.querySelector(selector);
@@ -16,6 +16,14 @@ function elementValue(selector) {
 }
 
 const boolValue = (selector) => elementValue(selector) === 'true';
+
+function hasKnownItemValue(item) {
+  return typeof item?.value === 'number' && Number.isFinite(item.value);
+}
+
+function itemValueLabel(item) {
+  return hasKnownItemValue(item) ? money(item.value) : 'Enter Raf value';
+}
 
 
 function escapeHtml(value) {
@@ -131,7 +139,8 @@ function updateImageLibraryStatus() {
   if (!node || !state.imageManifest) return;
   const allEntries = Object.values(state.imageManifest.secondaryTargets || {});
   const approved = allEntries.filter((entry) => entry.status === 'approved' && entry.image).length;
-  node.textContent = `Secondary images: ${approved}/${allEntries.length} approved local files · pool still being verified`;
+  const totalTargets = state.data?.items?.length || allEntries.length;
+  node.textContent = `Secondary images: ${approved}/${totalTargets} approved local files · 64-target name pool verified`;
 }
 
 function normalizeSearch(value) {
@@ -295,7 +304,7 @@ function createSelectedRow(item, itemState = {}) {
   const row = document.createElement('tr');
   row.className = 'loot-row';
   row.dataset.id = item.id;
-  row.dataset.defaultValue = String(item.value);
+  row.dataset.defaultValue = String(item.value ?? 0);
   row.innerHTML = `
     <td class="item-cell">
       <div class="item-flex">
@@ -306,7 +315,7 @@ function createSelectedRow(item, itemState = {}) {
         </div>
       </div>
     </td>
-    <td><input data-field="value" type="number" min="0" step="500" value="${itemState.value ?? item.value}" aria-label="Value of ${item.name}"></td>
+    <td><input data-field="value" type="number" min="0" step="500" value="${itemState.value ?? item.value ?? 0}" aria-label="Value of ${item.name}"></td>
     <td><input class="quantity" data-field="quantity" type="number" min="1" max="4" step="1" value="${itemState.quantity ?? 1}" aria-label="Amount of ${item.name}"></td>
     <td><input data-field="requested" type="checkbox" ${itemState.requested ? 'checked' : ''} aria-label="${item.name} is on the Buyer Request List"></td>
     <td><input data-field="twoPlayers" type="checkbox" ${itemState.requiresTwoPlayers ? 'checked' : ''} aria-label="${item.name} spawned in Crisp Gallery"></td>
@@ -320,7 +329,7 @@ function createSelectedRow(item, itemState = {}) {
 function addOrIncrementTarget(item, options = {}) {
   const existing = document.querySelector(`.loot-row[data-id="${CSS.escape(item.id)}"]`);
   const quantityToAdd = Math.max(1, Math.floor(Number(options.quantity) || 1));
-  const selectedValue = Math.max(0, Number(options.value ?? item.value) || 0);
+  const selectedValue = Math.max(0, Number(options.value ?? item.value ?? 0) || 0);
   if (existing) {
     const quantityInput = existing.querySelector('[data-field="quantity"]');
     quantityInput.value = Math.min(4, (Number(quantityInput.value) || 0) + quantityToAdd);
@@ -390,7 +399,7 @@ function syncTargetOptions() {
   const previous = select.value;
   const items = getFilteredPickerItems();
   select.innerHTML = items.length
-    ? items.map((item) => `<option value="${item.id}">${item.name} — ${money(item.value)}</option>`).join('')
+    ? items.map((item) => `<option value="${item.id}">${item.name} — ${itemValueLabel(item)}</option>`).join('')
     : '<option value="">No matching targets</option>';
   if (items.some((item) => item.id === previous)) select.value = previous;
   updateTargetHint({ overwriteValue: true });
@@ -405,18 +414,22 @@ function updateTargetHint({ overwriteValue = true } = {}) {
     return;
   }
   const category = state.data.categories[item.category];
-  if (overwriteValue) $('#addValue').value = String(item.value);
+  const hasKnownValue = hasKnownItemValue(item);
+  if (overwriteValue) $('#addValue').value = hasKnownValue ? String(item.value) : '0';
   const range = Array.isArray(item.valueRange) && item.valueRange.length === 2
     ? ` · observed ${money(item.valueRange[0])}–${money(item.valueRange[1])}`
     : '';
-  $('#targetHint').textContent = `${category.bagPercent}% of one bag · estimate ${money(item.value)}${range} · ${item.location}`;
+  const valueText = hasKnownValue ? `estimate ${money(item.value)}${range}` : 'no verified default — enter Raf value';
+  $('#targetHint').textContent = `${category.bagPercent}% of one bag · ${valueText} · ${item.location}`;
   renderPreview('pickerPreview', item.name, `${category.label} · ${category.bagPercent}% bag · ${item.location}`, getSecondaryImageEntry(item.id));
 }
 
 function renderCategoryReference(data) {
   const body = $('#categoryReference');
   body.innerHTML = Object.entries(data.categories).map(([categoryId, category]) => {
-    const values = data.items.filter((item) => item.category === categoryId).map((item) => Number(item.value));
+    const values = data.items
+      .filter((item) => item.category === categoryId && hasKnownItemValue(item))
+      .map((item) => item.value);
     const min = Math.min(...values);
     const max = Math.max(...values);
     const average = values.reduce((sum, value) => sum + value, 0) / values.length;

@@ -1,708 +1,1205 @@
 {
-  "meta": {
-    "title": "Kortz Center Heist Calculator",
-    "updated": "2026-07-22",
-    "bagCapacityPerPlayer": 100,
-    "buyerRequestBonus": 50000,
-    "eliteBonus": {
-      "normal": 50000,
-      "hard": 100000
-    },
-    "defaultPrimary": {
-      "name": "La Dernière Débauche",
-      "repeatValue": 481250,
-      "weeklyMultiplier": 4,
-      "hardMultiplier": 1.1
-    },
-    "notes": [
-      "The primary target receives the weekly multiplier only on the first sale of the weekly cycle.",
-      "Hard mode increases the primary-target payout by approximately 10%.",
-      "Secondary-target values vary between runs. The exact value shown by Raf takes priority over every guide estimate.",
-      "The secondary-loot pool is still being verified from community guides and in-game captures. Some targets may still be missing, renamed, or estimated until the GTA V localization files are checked."
-    ],
-    "primaryTargets": [
-      {
-        "id": "la-derniere-debauche",
-        "name": "La Dernière Débauche",
-        "repeatValue": 481250,
-        "note": "Story target. It must be sold."
-      },
-      {
-        "id": "the-downfall-of-rome",
-        "name": "The Downfall of Rome",
-        "repeatValue": 305000,
-        "note": "Observed in-game value. You can edit it if your planning board shows a different amount."
-      },
-      {
-        "id": "outcome-of-endeavour",
-        "name": "The Outcome of Endeavour",
-        "repeatValue": null,
-        "note": "Elitist bonus target. Enter the repeat-sale value shown on your planning board."
-      },
-      {
-        "id": "other-weekly-target",
-        "name": "Other weekly painting",
-        "repeatValue": null,
-        "note": "Use this for a rotating target not yet listed. Enter the repeat-sale value shown on your planning board."
-      }
-    ]
-  },
-  "categories": {
-    "painting": {
-      "label": "Painting",
-      "bagPercent": 50,
-      "requiresGlassCutter": false
-    },
-    "small": {
-      "label": "Small exhibit",
-      "bagPercent": 10,
-      "requiresGlassCutter": false
-    },
-    "egg": {
-      "label": "Coquard egg",
-      "bagPercent": 25,
-      "requiresGlassCutter": false
-    },
-    "glass": {
-      "label": "Reinforced display",
-      "bagPercent": 30,
-      "requiresGlassCutter": true
-    }
-  },
-  "items": [
-    {
-      "id": "canis-hominem-edit",
-      "name": "Canis Hominem Edit",
-      "category": "painting",
-      "value": 100000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "cooked",
-      "name": "Cooked",
-      "category": "painting",
-      "value": 120000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "do-you-see-me",
-      "name": "Do You See Me",
-      "category": "painting",
-      "value": 105000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community",
-        "beebom"
-      ]
-    },
-    {
-      "id": "dont-forgo-blueprints",
-      "name": "Don't Forgo These Blueprints",
-      "category": "painting",
-      "value": 150000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "explain-yourself",
-      "name": "Explain Yourself",
-      "category": "painting",
-      "value": 110000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community",
-        "beebom"
-      ]
-    },
-    {
-      "id": "het-gouden-hondje",
-      "name": "Het Gouden Hondje",
-      "category": "painting",
-      "value": 82500,
-      "location": "Storage",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "la-duchesse",
-      "name": "La Duchesse",
-      "category": "painting",
-      "value": 105000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community",
-        "beebom"
-      ]
-    },
-    {
-      "id": "orange-crush",
-      "name": "Orange Crush",
-      "category": "painting",
-      "value": 107500,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community",
-        "beebom"
-      ]
-    },
-    {
-      "id": "sod-off",
-      "name": "Sod Off",
-      "category": "painting",
-      "value": 115000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "swingset-study-lxix",
-      "name": "Swingset Study No. LXIX",
-      "category": "painting",
-      "value": 77500,
-      "location": "Storage",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "the-chief",
-      "name": "The Chief",
-      "category": "painting",
-      "value": 110000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community",
-        "beebom"
-      ]
-    },
-    {
-      "id": "great-circle-back",
-      "name": "The Great Circle Back",
-      "category": "painting",
-      "value": 145000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "hunter-becomes-hunted",
-      "name": "The Hunter Becomes the Hunted",
-      "category": "painting",
-      "value": 75000,
-      "location": "Storage",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "with-friends-like-these",
-      "name": "With Friends Like These",
-      "category": "painting",
-      "value": 85000,
-      "location": "Storage",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "antique-bands",
-      "name": "Antique Bands",
-      "category": "small",
-      "value": 35000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "antique-rings",
-      "name": "Antique Rings",
-      "category": "small",
-      "value": 34000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "art-deco-circlets",
-      "name": "Art Deco Circlets",
-      "category": "small",
-      "value": 47000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games"
-      ],
-      "aliases": [
-        "art deco circlet"
-      ]
-    },
-    {
-      "id": "art-deco-rings",
-      "name": "Art Deco Rings",
-      "category": "small",
-      "value": 34000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "byzantine-hoops",
-      "name": "Byzantine Hoops",
-      "category": "small",
-      "value": 29000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "coquard-bracelets",
-      "name": "Coquard Bracelets",
-      "category": "small",
-      "value": 29000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "coquard-bracelet",
-      "name": "Coquard Rings",
-      "category": "small",
-      "value": 31000,
-      "location": "First Floor Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community",
-        "beebom"
-      ],
-      "aliases": [
-        "coquard bracelet",
-        "coquard ring"
-      ]
-    },
-    {
-      "id": "fertility-bronze",
-      "name": "Fertility Statue (Bronze)",
-      "category": "small",
-      "value": 68000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "fertility-gold",
-      "name": "Fertility Statue (Gold)",
-      "category": "small",
-      "value": 54000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games"
-      ],
-      "aliases": [
-        "gold fertility statue"
-      ]
-    },
-    {
-      "id": "fertility-ivory",
-      "name": "Fertility Statue (Ivory)",
-      "category": "small",
-      "value": 62000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "fertility-silver",
-      "name": "Fertility Statue (Silver)",
-      "category": "small",
-      "value": 56000,
-      "location": "Gallery",
-      "sourceConfidence": "variable",
-      "valueRange": [
-        56000,
-        82000
-      ],
-      "sourceIds": [
-        "steam-community"
-      ],
-      "aliases": [
-        "fertility silver",
-        "silver fertility statue"
-      ]
-    },
-    {
-      "id": "meteorite-fragment",
-      "name": "Meteorite Fragment",
-      "category": "small",
-      "value": 77000,
-      "location": "Gallery",
-      "sourceConfidence": "range",
-      "valueRange": [
-        70000,
-        84000
-      ],
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "pharaonic-bangles",
-      "name": "Pharaonic Bangles",
-      "category": "small",
-      "value": 31000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "venus-ivory",
-      "name": "Venus d’Algernon (Ivory)",
-      "category": "small",
-      "value": 120000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "dragon-egg",
-      "name": "Dragon Egg Coquard",
-      "category": "egg",
-      "value": 54000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "oeuf-coquard",
-      "name": "Œuf de Coquard",
-      "category": "egg",
-      "value": 52000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "oeuf-des-abimes",
-      "name": "Œuf de Coquard des abîmes",
-      "category": "egg",
-      "value": 56000,
-      "location": "Gallery",
-      "sourceConfidence": "observed",
-      "sourceIds": [],
-      "aliases": [
-        "oeuf de coquard des abimes",
-        "coquard abyss egg",
-        "abyss coquard egg"
-      ]
-    },
-    {
-      "id": "oeuf-decoratif",
-      "name": "Œuf de Coquard décoratif",
-      "category": "egg",
-      "value": 54000,
-      "location": "Ground Floor Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games",
-        "beebom"
-      ],
-      "aliases": [
-        "oeuf de coquard decoratif",
-        "coquard decorative egg",
-        "decorative coquard egg"
-      ]
-    },
-    {
-      "id": "oeuf-enchante",
-      "name": "Œuf de Coquard enchanté",
-      "category": "egg",
-      "value": 52000,
-      "location": "Gallery",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ],
-      "aliases": [
-        "oeuf de coquard enchante",
-        "coquard enchanted egg"
-      ]
-    },
-    {
-      "id": "forest-egg",
-      "name": "Œuf de Coquard verdoyant",
-      "category": "egg",
-      "value": 60000,
-      "location": "Gallery",
-      "sourceConfidence": "user-photo",
-      "sourceIds": [
-        "steam-community",
-        "user-photo-batch"
-      ]
-    },
-    {
-      "id": "aquamarine",
-      "name": "Aquamarine Gemstone",
-      "category": "glass",
-      "value": 105000,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games",
-        "beebom"
-      ]
-    },
-    {
-      "id": "coquard-carcanet-imperial-topaz",
-      "name": "Coquard Carcanet (Imperial Topaz)",
-      "category": "glass",
-      "value": 102500,
-      "location": "Display case",
-      "sourceConfidence": "provisional",
-      "sourceIds": [
-        "user-photo-batch"
-      ],
-      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
-    },
-    {
-      "id": "coquard-carcanet-sapphire",
-      "name": "Coquard Carcanet (Sapphire)",
-      "category": "glass",
-      "value": 85000,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games",
-        "beebom"
-      ]
-    },
-    {
-      "id": "coquard-carcanet-tanzanite",
-      "name": "Coquard Carcanet (Tanzanite)",
-      "category": "glass",
-      "value": 97500,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games",
-        "beebom"
-      ]
-    },
-    {
-      "id": "gray-spinel-gemstone",
-      "name": "Gray Spinel Gemstone",
-      "category": "glass",
-      "value": 92500,
-      "location": "Display case",
-      "sourceConfidence": "provisional",
-      "sourceIds": [
-        "user-photo-batch"
-      ],
-      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
-    },
-    {
-      "id": "marble-sabino-criollo",
-      "name": "Marble Sabino Criollo",
-      "category": "glass",
-      "value": 90000,
-      "location": "Display case",
-      "sourceConfidence": "provisional",
-      "sourceIds": [
-        "user-photo-batch"
-      ],
-      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
-    },
-    {
-      "id": "memento-amethyst",
-      "name": "Memento Non Mori (Amethyst)",
-      "category": "glass",
-      "value": 87500,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "qm-games",
-        "beebom"
-      ],
-      "aliases": [
-        "momento non mori amethyst",
-        "memento mori amethyst"
-      ]
-    },
-    {
-      "id": "memento-diamond",
-      "name": "Memento Non Mori (Diamond)",
-      "category": "glass",
-      "value": 97500,
-      "location": "Reinforced display case",
-      "sourceConfidence": "observed",
-      "sourceIds": [],
-      "aliases": [
-        "momento non mori diamond",
-        "memento mori diamond",
-        "diamond memento"
-      ]
-    },
-    {
-      "id": "memento-emerald",
-      "name": "Memento Non Mori (Emerald)",
-      "category": "glass",
-      "value": 77500,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ],
-      "aliases": [
-        "momento non mori emerald",
-        "memento mori emerald"
-      ]
-    },
-    {
-      "id": "memento-ruby",
-      "name": "Memento Non Mori (Ruby)",
-      "category": "glass",
-      "value": 92500,
-      "location": "Display case",
-      "sourceConfidence": "provisional",
-      "sourceIds": [
-        "community-guide"
-      ],
-      "note": "Community-confirmed target. Default value is provisional; replace it with Raf’s in-game value if different."
-    },
-    {
-      "id": "perlino-andalusian",
-      "name": "Perlino Andalusian",
-      "category": "glass",
-      "value": 95000,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "purple-sapphire",
-      "name": "Purple Sapphire",
-      "category": "glass",
-      "value": 90000,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    },
-    {
-      "id": "algernons-venus",
-      "name": "Venus d’Algernon (Marble)",
-      "category": "glass",
-      "value": 110000,
-      "location": "Display case",
-      "sourceConfidence": "user-photo",
-      "sourceIds": [
-        "steam-community",
-        "user-photo-batch"
-      ]
-    },
-    {
-      "id": "yellow-topaz",
-      "name": "Yellow Topaz Gemstone",
-      "category": "glass",
-      "value": 107500,
-      "location": "Display case",
-      "sourceConfidence": "guide",
-      "sourceIds": [
-        "steam-community"
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "name": "Rockstar Games — The Kortz Center Heist",
-      "url": "https://www.rockstargames.com/newswire/article/2525o93834o413/the-kortz-center-heist-now-available-in-gta-online",
-      "scope": "Official mechanics, primary targets and heist launch information",
-      "id": "rockstar"
-    },
-    {
-      "name": "GTA Base — The Kortz Center Heist",
-      "url": "https://www.gtabase.com/missions/gta-online/heists/the-kortz-center-heist",
-      "scope": "Primary payout, weekly multiplier, hard mode and Elite Challenge",
-      "id": "gtabase"
-    },
-    {
-      "name": "GTA BOOM — Scope Out Guide",
-      "url": "https://www.gtaboom.com/kortz-center-heist-complete-scope-out-guide-d88b",
-      "scope": "Buyer Request List, bonus and solo restrictions",
-      "id": "gtaboom"
-    },
-    {
-      "name": "Steam Community — Kortz Center Guide",
-      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
-      "scope": "Initial target-value and bag-fill table",
-      "id": "steam-community"
-    },
-    {
-      "name": "GTA Guide — Heist Payouts Update",
-      "url": "https://gta.guide/article/heist-payouts-update",
-      "scope": "Weekly multiplier and primary-payout range",
-      "id": "gta-guide"
-    },
-    {
-      "id": "beebom",
-      "name": "Beebom — All Kortz Center Targets and Payouts",
-      "url": "https://beebom.com/gta-online-kortz-center-heist-targets/",
-      "scope": "Secondary-target names and locations; some values are treated cautiously because of apparent tenfold typos"
-    },
-    {
-      "id": "qm-games",
-      "name": "QM Games — All Secondary Targets Locations",
-      "url": "https://quoramarketing.com/all-secondary-targets-locations-in-kortz-center-heist-in-gta-5-online/",
-      "scope": "Additional target variants and initial values"
-    }
-  ]
+    "meta":  {
+                 "title":  "Kortz Center Heist Calculator",
+                 "updated":  "2026-07-22",
+                 "bagCapacityPerPlayer":  100,
+                 "buyerRequestBonus":  50000,
+                 "eliteBonus":  {
+                                    "normal":  50000,
+                                    "hard":  100000
+                                },
+                 "defaultPrimary":  {
+                                        "name":  "La DerniÃ¨re DÃ©bauche",
+                                        "repeatValue":  481250,
+                                        "weeklyMultiplier":  4,
+                                        "hardMultiplier":  1.1
+                                    },
+                 "notes":  [
+                               "The primary target receives the weekly multiplier only on the first sale of the weekly cycle.",
+                               "Hard mode increases the primary-target payout by approximately 10%.",
+                               "Secondary-target values vary between runs. The exact value shown by Raf takes priority over every guide estimate.",
+                               "The 64 secondary-target names are verified from fm_content_kortz_scoping.ysc and the English global.gxt2. Default values, bag fill, cutter requirements, and locations remain provisional until live tunables and in-game observations are verified."
+                           ],
+                 "primaryTargets":  [
+                                        {
+                                            "id":  "la-derniere-debauche",
+                                            "name":  "La DerniÃ¨re DÃ©bauche",
+                                            "repeatValue":  481250,
+                                            "note":  "Story target. It must be sold."
+                                        },
+                                        {
+                                            "id":  "the-downfall-of-rome",
+                                            "name":  "The Downfall of Rome",
+                                            "repeatValue":  305000,
+                                            "note":  "Observed in-game value. You can edit it if your planning board shows a different amount."
+                                        },
+                                        {
+                                            "id":  "outcome-of-endeavour",
+                                            "name":  "The Outcome of Endeavour",
+                                            "repeatValue":  null,
+                                            "note":  "Elitist bonus target. Enter the repeat-sale value shown on your planning board."
+                                        },
+                                        {
+                                            "id":  "other-weekly-target",
+                                            "name":  "Other weekly painting",
+                                            "repeatValue":  null,
+                                            "note":  "Use this for a rotating target not yet listed. Enter the repeat-sale value shown on your planning board."
+                                        }
+                                    ],
+                 "scriptVerification":  {
+                                            "verifiedDate":  "2026-07-22",
+                                            "secondaryTargetCount":  64,
+                                            "script":  "fm_content_kortz_scoping.ysc",
+                                            "finalHashToLabelFunction":  "0x22B1B3",
+                                            "dynamicVariants":  41,
+                                            "fixedTargets":  23
+                                        }
+             },
+    "categories":  {
+                       "painting":  {
+                                        "label":  "Painting",
+                                        "bagPercent":  50,
+                                        "requiresGlassCutter":  false
+                                    },
+                       "small":  {
+                                     "label":  "Small exhibit",
+                                     "bagPercent":  10,
+                                     "requiresGlassCutter":  false
+                                 },
+                       "egg":  {
+                                   "label":  "Coquard egg",
+                                   "bagPercent":  25,
+                                   "requiresGlassCutter":  false
+                               },
+                       "glass":  {
+                                     "label":  "Reinforced display",
+                                     "bagPercent":  30,
+                                     "requiresGlassCutter":  true
+                                 }
+                   },
+    "items":  [
+                  {
+                      "id":  "canis-hominem-edit",
+                      "name":  "Canis Hominem Edit",
+                      "category":  "painting",
+                      "value":  100000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTI",
+                      "gxtHash":  "48B66B69",
+                      "internalItemHash":  "9354D59A",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "cooked",
+                      "name":  "Cooked",
+                      "category":  "painting",
+                      "value":  120000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTB",
+                      "gxtHash":  "F96F4CAC",
+                      "internalItemHash":  "1615436E",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "do-you-see-me",
+                      "name":  "Do You See Me",
+                      "category":  "painting",
+                      "value":  105000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTE",
+                      "gxtHash":  "8E45767E",
+                      "internalItemHash":  "BAF828D4",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "dont-forgo-blueprints",
+                      "name":  "Don\u0027t Forgo These Blueprints",
+                      "category":  "painting",
+                      "value":  150000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTD",
+                      "gxtHash":  "95EC05A7",
+                      "internalItemHash":  "CEDFCF43",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "explain-yourself",
+                      "name":  "Explain Yourself",
+                      "category":  "painting",
+                      "value":  110000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTG",
+                      "gxtHash":  "2B2BB054",
+                      "internalItemHash":  "22C2F634",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "het-gouden-hondje",
+                      "name":  "Het Gouden Hondje",
+                      "category":  "painting",
+                      "value":  82500,
+                      "location":  "Storage",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTL",
+                      "gxtHash":  "12D17FA0",
+                      "internalItemHash":  "0434319F",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "la-duchesse",
+                      "name":  "La Duchesse",
+                      "category":  "painting",
+                      "value":  105000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTF",
+                      "gxtHash":  "1C07120B",
+                      "internalItemHash":  "78289F92",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "orange-crush",
+                      "name":  "Orange Crush",
+                      "category":  "painting",
+                      "value":  107500,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTJ",
+                      "gxtHash":  "D57F84FD",
+                      "internalItemHash":  "D10ACD69",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "sod-off",
+                      "name":  "Sod Off",
+                      "category":  "painting",
+                      "value":  115000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTA",
+                      "gxtHash":  "EBB6313A",
+                      "internalItemHash":  "B719052F",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "swingset-study-lxix",
+                      "name":  "Swingset Study No. LXIX",
+                      "category":  "painting",
+                      "value":  77500,
+                      "location":  "Storage",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTM",
+                      "gxtHash":  "01B8DD63",
+                      "internalItemHash":  "80932B87",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "the-chief",
+                      "name":  "The Chief",
+                      "category":  "painting",
+                      "value":  110000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTH",
+                      "gxtHash":  "39EACDD2",
+                      "internalItemHash":  "011AAF00",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "great-circle-back",
+                      "name":  "The Great Circle Back",
+                      "category":  "painting",
+                      "value":  145000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTC",
+                      "gxtHash":  "0A8AEEE3",
+                      "internalItemHash":  "0086953D",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "hunter-becomes-hunted",
+                      "name":  "The Hunter Becomes the Hunted",
+                      "category":  "painting",
+                      "value":  75000,
+                      "location":  "Storage",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTN",
+                      "gxtHash":  "0F8678FE",
+                      "internalItemHash":  "10AC4E0D",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "with-friends-like-these",
+                      "name":  "With Friends Like These",
+                      "category":  "painting",
+                      "value":  85000,
+                      "location":  "Storage",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_PANTK",
+                      "gxtHash":  "E4122222",
+                      "internalItemHash":  "16125877",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "antique-bands",
+                      "name":  "Antique Bands",
+                      "category":  "small",
+                      "value":  35000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_BRACE",
+                      "gxtHash":  "816DA0B9",
+                      "internalItemHash":  "9A4CC15A",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "antique-rings",
+                      "name":  "Antique Rings",
+                      "category":  "small",
+                      "value":  34000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_RINGC",
+                      "gxtHash":  "C89D0F0F",
+                      "internalItemHash":  "89415716",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "art-deco-circlets",
+                      "name":  "Art Deco Circlets",
+                      "category":  "small",
+                      "value":  47000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games"
+                                    ],
+                      "aliases":  [
+                                      "art deco circlet"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_BRACB",
+                      "gxtHash":  "9640CA5F",
+                      "internalItemHash":  "9A249E96",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "art-deco-rings",
+                      "name":  "Art Deco Rings",
+                      "category":  "small",
+                      "value":  34000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_RINGB",
+                      "gxtHash":  "1DEE39B0",
+                      "internalItemHash":  "8060B695",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "byzantine-hoops",
+                      "name":  "Byzantine Hoops",
+                      "category":  "small",
+                      "value":  29000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_BRACD",
+                      "gxtHash":  "73A30524",
+                      "internalItemHash":  "1DAAC8A0",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-bracelets",
+                      "name":  "Coquard Bracelets",
+                      "category":  "small",
+                      "value":  29000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_BRACA",
+                      "gxtHash":  "C84BAE74",
+                      "internalItemHash":  "3304D3E4",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-bracelet",
+                      "name":  "Coquard Rings",
+                      "category":  "small",
+                      "value":  31000,
+                      "location":  "First Floor Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "beebom"
+                                    ],
+                      "aliases":  [
+                                      "coquard bracelet",
+                                      "coquard ring"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_RINGA",
+                      "gxtHash":  "EB22D41A",
+                      "internalItemHash":  "45FBC4FC",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "fertility-bronze",
+                      "name":  "Fertility Statue (Bronze)",
+                      "category":  "small",
+                      "value":  68000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_IDOLD",
+                      "gxtHash":  "3FBB5D68",
+                      "internalItemHash":  "7A051EE7",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "fertility-gold",
+                      "name":  "Fertility Statue (Gold)",
+                      "category":  "small",
+                      "value":  54000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games"
+                                    ],
+                      "aliases":  [
+                                      "gold fertility statue"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_IDOLB",
+                      "gxtHash":  "83B86561",
+                      "internalItemHash":  "D1D5CE8B",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "fertility-ivory",
+                      "name":  "Fertility Statue (Ivory)",
+                      "category":  "small",
+                      "value":  62000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_IDOLE",
+                      "gxtHash":  "5079FEE5",
+                      "internalItemHash":  "44EEB4BB",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "fertility-mahogany",
+                      "name":  "Fertility Statue (Mahogany)",
+                      "category":  "small",
+                      "value":  0,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_IDOLA / 7FB7AA4C. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_IDOLA",
+                      "gxtHash":  "770F4C0F",
+                      "internalItemHash":  "7FB7AA4C",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "fertility-silver",
+                      "name":  "Fertility Statue (Silver)",
+                      "category":  "small",
+                      "value":  56000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "variable",
+                      "valueRange":  [
+                                         56000,
+                                         82000
+                                     ],
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "fertility silver",
+                                      "silver fertility statue"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_IDOLC",
+                      "gxtHash":  "520181F4",
+                      "internalItemHash":  "A7CBFA74",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "meteorite-fragment",
+                      "name":  "Meteorite Fragment",
+                      "category":  "small",
+                      "value":  77000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "range",
+                      "valueRange":  [
+                                         70000,
+                                         84000
+                                     ],
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_METEA",
+                      "gxtHash":  "C98D37C9",
+                      "internalItemHash":  "4ABA52D3",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "pharaonic-bangles",
+                      "name":  "Pharaonic Bangles",
+                      "category":  "small",
+                      "value":  31000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_BRACC",
+                      "gxtHash":  "A5E269A2",
+                      "internalItemHash":  "64E0B6A7",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "venus-ivory",
+                      "name":  "Venus d\u0027Algernon (Ivory)",
+                      "category":  "small",
+                      "value":  120000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "Venus d’Algernon (Ivory)"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_STATD",
+                      "gxtHash":  "E5F04497",
+                      "internalItemHash":  "7FE32BEB",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "dragon-egg",
+                      "name":  "Œuf de Coquard de vouivre",
+                      "category":  "egg",
+                      "value":  54000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "Dragon Egg Coquard",
+                                      "Wyvern Coquard Egg"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_OEGGF",
+                      "gxtHash":  "C80B244C",
+                      "internalItemHash":  "0CB08879",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "oeuf-des-abimes",
+                      "name":  "Œuf de Coquard des abîmes",
+                      "category":  "egg",
+                      "value":  56000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "observed",
+                      "sourceIds":  [
+
+                                    ],
+                      "aliases":  [
+                                      "oeuf de coquard des abimes",
+                                      "coquard abyss egg",
+                                      "abyss coquard egg"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_OEGGD",
+                      "gxtHash":  "71F0F819",
+                      "internalItemHash":  "90A91074",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "oeuf-decoratif",
+                      "name":  "Œuf de Coquard décoratif",
+                      "category":  "egg",
+                      "value":  54000,
+                      "location":  "Ground Floor Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games",
+                                        "beebom"
+                                    ],
+                      "aliases":  [
+                                      "oeuf de coquard decoratif",
+                                      "coquard decorative egg",
+                                      "decorative coquard egg"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_OEGGC",
+                      "gxtHash":  "63D75BE6",
+                      "internalItemHash":  "59992259",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "oeuf-enchante",
+                      "name":  "Œuf de Coquard enchanté",
+                      "category":  "egg",
+                      "value":  52000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "oeuf de coquard enchante",
+                                      "coquard enchanted egg"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_OEGGB",
+                      "gxtHash":  "118EB752",
+                      "internalItemHash":  "750C593F",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "forest-coquard-egg",
+                      "name":  "Œuf de Coquard forestier",
+                      "category":  "egg",
+                      "value":  0,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "aliases":  [
+                                      "Forest Coquard Egg"
+                                  ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_OEGGG / FEE3ECDC. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_OEGGG",
+                      "gxtHash":  "1AA9C988",
+                      "internalItemHash":  "FEE3ECDC",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "oeuf-coquard",
+                      "name":  "Œuf de Coquard royal",
+                      "category":  "egg",
+                      "value":  52000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "Œuf de Coquard",
+                                      "Royal Coquard Egg"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_OEGGA",
+                      "gxtHash":  "FF4A12C9",
+                      "internalItemHash":  "3BB7E697",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "forest-egg",
+                      "name":  "Œuf de Coquard verdoyant",
+                      "category":  "egg",
+                      "value":  60000,
+                      "location":  "Gallery",
+                      "sourceConfidence":  "user-photo",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "user-photo-batch"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_OEGGE",
+                      "gxtHash":  "B604803F",
+                      "internalItemHash":  "82BD74A1",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "aquamarine",
+                      "name":  "Aquamarine Gemstone",
+                      "category":  "glass",
+                      "value":  105000,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_JEWLE",
+                      "gxtHash":  "15537135",
+                      "internalItemHash":  "1CCA8AE2",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-carcanet-emerald",
+                      "name":  "Coquard Carcanet (Emerald)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_NECKB / 6651378D. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_NECKB",
+                      "gxtHash":  "DE318C04",
+                      "internalItemHash":  "6651378D",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-carcanet-imperial-topaz",
+                      "name":  "Coquard Carcanet (Imperial Topaz)",
+                      "category":  "glass",
+                      "value":  102500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "provisional",
+                      "sourceIds":  [
+                                        "user-photo-batch"
+                                    ],
+                      "note":  "Community-confirmed target. Default value is provisional; replace it with Rafâ€™s in-game value if different.",
+                      "gxtLabel":  "KH_LOOT_NECKD",
+                      "gxtHash":  "91AB72F9",
+                      "internalItemHash":  "70D2CC90",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-carcanet-red-spinel",
+                      "name":  "Coquard Carcanet (Red Spinel)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_NECKA / B809DAF9. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_NECKA",
+                      "gxtHash":  "EC8328A7",
+                      "internalItemHash":  "B809DAF9",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-carcanet-sapphire",
+                      "name":  "Coquard Carcanet (Sapphire)",
+                      "category":  "glass",
+                      "value":  85000,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_NECKC",
+                      "gxtHash":  "A76C9E7F",
+                      "internalItemHash":  "54139312",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-carcanet-tanzanite",
+                      "name":  "Coquard Carcanet (Tanzanite)",
+                      "category":  "glass",
+                      "value":  97500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games",
+                                        "beebom"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_NECKF",
+                      "gxtHash":  "BB29C5F9",
+                      "internalItemHash":  "0EA9083E",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "coquard-carcanet-yellow-diamond",
+                      "name":  "Coquard Carcanet (Yellow Diamond)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_NECKE / 20E3ACB3. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_NECKE",
+                      "gxtHash":  "C8BE6122",
+                      "internalItemHash":  "20E3ACB3",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "cremello-dutch-warmblood",
+                      "name":  "Cremello Dutch Warmblood",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_HORSB / 0D5698D3. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_HORSB",
+                      "gxtHash":  "35BB4FA0",
+                      "internalItemHash":  "0D5698D3",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "emerald-gemstone",
+                      "name":  "Emerald Gemstone",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_JEWLA / 435FD804. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_JEWLA",
+                      "gxtHash":  "406CC767",
+                      "internalItemHash":  "435FD804",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "gold-turkoman",
+                      "name":  "Gold Turkoman",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_HORSC / 37176C54. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_HORSC",
+                      "gxtHash":  "475272CE",
+                      "internalItemHash":  "37176C54",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "gray-spinel-gemstone",
+                      "name":  "Gray Spinel Gemstone",
+                      "category":  "glass",
+                      "value":  92500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "provisional",
+                      "sourceIds":  [
+                                        "user-photo-batch"
+                                    ],
+                      "note":  "Community-confirmed target. Default value is provisional; replace it with Rafâ€™s in-game value if different.",
+                      "gxtLabel":  "KH_LOOT_JEWLF",
+                      "gxtHash":  "F2132AB5",
+                      "internalItemHash":  "0E94EE77",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "marble-sabino-criollo",
+                      "name":  "Marble Sabino Criollo",
+                      "category":  "glass",
+                      "value":  90000,
+                      "location":  "Display case",
+                      "sourceConfidence":  "provisional",
+                      "sourceIds":  [
+                                        "user-photo-batch"
+                                    ],
+                      "note":  "Community-confirmed target. Default value is provisional; replace it with Rafâ€™s in-game value if different.",
+                      "gxtLabel":  "KH_LOOT_HORSA",
+                      "gxtHash":  "2AE5B9F5",
+                      "internalItemHash":  "1B91B549",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "memento-amethyst",
+                      "name":  "Memento Non Mori (Amethyst)",
+                      "category":  "glass",
+                      "value":  87500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "qm-games",
+                                        "beebom"
+                                    ],
+                      "aliases":  [
+                                      "momento non mori amethyst",
+                                      "memento mori amethyst"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_SKLLD",
+                      "gxtHash":  "ACE7295E",
+                      "internalItemHash":  "B5A00C12",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "memento-diamond",
+                      "name":  "Memento Non Mori (Diamond)",
+                      "category":  "glass",
+                      "value":  97500,
+                      "location":  "Reinforced display case",
+                      "sourceConfidence":  "observed",
+                      "sourceIds":  [
+
+                                    ],
+                      "aliases":  [
+                                      "momento non mori diamond",
+                                      "memento mori diamond",
+                                      "diamond memento"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_SKLLF",
+                      "gxtHash":  "D36BF667",
+                      "internalItemHash":  "1B8757E7",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "memento-emerald",
+                      "name":  "Memento Non Mori (Emerald)",
+                      "category":  "glass",
+                      "value":  77500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "momento non mori emerald",
+                                      "memento mori emerald"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_SKLLA",
+                      "gxtHash":  "7B78C67E",
+                      "internalItemHash":  "0EF43EB9",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "memento-gold",
+                      "name":  "Memento Non Mori (Gold)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "aliases":  [
+                                      "Momento Non Mori (Gold)",
+                                      "Memento Mori (Gold)"
+                                  ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_SKLLC / 9967D3A2. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_SKLLC",
+                      "gxtHash":  "9E828C95",
+                      "internalItemHash":  "9967D3A2",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "memento-ruby",
+                      "name":  "Memento Non Mori (Ruby)",
+                      "category":  "glass",
+                      "value":  92500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "provisional",
+                      "sourceIds":  [
+                                        "community-guide"
+                                    ],
+                      "note":  "Community-confirmed target. Default value is provisional; replace it with Rafâ€™s in-game value if different.",
+                      "gxtLabel":  "KH_LOOT_SKLLB",
+                      "gxtHash":  "88526031",
+                      "internalItemHash":  "8B423757",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "memento-sapphire",
+                      "name":  "Memento Non Mori (Sapphire)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "aliases":  [
+                                      "Momento Non Mori (Sapphire)",
+                                      "Memento Mori (Sapphire)"
+                                  ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_SKLLE / C3DEA88F. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_SKLLE",
+                      "gxtHash":  "C30C55A8",
+                      "internalItemHash":  "C3DEA88F",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "perlino-andalusian",
+                      "name":  "Perlino Andalusian",
+                      "category":  "glass",
+                      "value":  95000,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_HORSE",
+                      "gxtHash":  "E1BBA7A2",
+                      "internalItemHash":  "34DEE7E7",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "purple-sapphire",
+                      "name":  "Purple Sapphire Gemstone",
+                      "category":  "glass",
+                      "value":  90000,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "aliases":  [
+                                      "Purple Sapphire"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_JEWLG",
+                      "gxtHash":  "B93738FE",
+                      "internalItemHash":  "F94DC3E9",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "ruby-gemstone",
+                      "name":  "Ruby Gemstone",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_JEWLB / 35B63CB1. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_JEWLB",
+                      "gxtHash":  "392AB8E3",
+                      "internalItemHash":  "35B63CB1",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "silver-dapple-pinto",
+                      "name":  "Silver Dapple Pinto",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Previously missed target. Verified in fm_content_kortz_scoping.ysc: KH_LOOT_HORSD / 2882CF2B. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_HORSD",
+                      "gxtHash":  "CF92034F",
+                      "internalItemHash":  "2882CF2B",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "tanzanite-gemstone",
+                      "name":  "Tanzanite Gemstone",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_JEWLD / 122A759A. Enter Raf’s in-game value.",
+                      "gxtLabel":  "KH_LOOT_JEWLD",
+                      "gxtHash":  "4EB863FE",
+                      "internalItemHash":  "122A759A",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "venus-bronze",
+                      "name":  "Venus d\u0027Algernon (Bronze)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_STATC / 6DA90777. Enter Raf’s in-game value.",
+                      "aliases":  [
+                                      "Venus d’Algernon (Bronze)"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_STATC",
+                      "gxtHash":  "D594A3E0",
+                      "internalItemHash":  "6DA90777",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "venus-gold",
+                      "name":  "Venus d\u0027Algernon (Gold)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_STATA / 521CD05F. Enter Raf’s in-game value.",
+                      "aliases":  [
+                                      "Venus d’Algernon (Gold)"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_STATA",
+                      "gxtHash":  "F6E7E686",
+                      "internalItemHash":  "521CD05F",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "algernons-venus",
+                      "name":  "Venus d\u0027Algernon (Marble)",
+                      "category":  "glass",
+                      "value":  110000,
+                      "location":  "Display case",
+                      "sourceConfidence":  "user-photo",
+                      "sourceIds":  [
+                                        "steam-community",
+                                        "user-photo-batch"
+                                    ],
+                      "aliases":  [
+                                      "Venus d’Algernon (Marble)"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_STATE",
+                      "gxtHash":  "391AEAEB",
+                      "internalItemHash":  "024A30C7",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "venus-silver",
+                      "name":  "Venus d\u0027Algernon (Silver)",
+                      "category":  "glass",
+                      "value":  0,
+                      "location":  "Display case",
+                      "sourceConfidence":  "script-verified-name",
+                      "sourceIds":  [
+
+                                    ],
+                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_STATB / 645E74E2. Enter Raf’s in-game value.",
+                      "aliases":  [
+                                      "Venus d’Algernon (Silver)"
+                                  ],
+                      "gxtLabel":  "KH_LOOT_STATB",
+                      "gxtHash":  "92831DBE",
+                      "internalItemHash":  "645E74E2",
+                      "scriptVerified":  true
+                  },
+                  {
+                      "id":  "yellow-topaz",
+                      "name":  "Yellow Topaz Gemstone",
+                      "category":  "glass",
+                      "value":  107500,
+                      "location":  "Display case",
+                      "sourceConfidence":  "guide",
+                      "sourceIds":  [
+                                        "steam-community"
+                                    ],
+                      "gxtLabel":  "KH_LOOT_JEWLC",
+                      "gxtHash":  "E3BE8E0C",
+                      "internalItemHash":  "1FED111F",
+                      "scriptVerified":  true
+                  }
+              ],
+    "sources":  [
+                    {
+                        "name":  "Rockstar Games â€” The Kortz Center Heist",
+                        "url":  "https://www.rockstargames.com/newswire/article/2525o93834o413/the-kortz-center-heist-now-available-in-gta-online",
+                        "scope":  "Official mechanics, primary targets and heist launch information",
+                        "id":  "rockstar"
+                    },
+                    {
+                        "name":  "GTA Base â€” The Kortz Center Heist",
+                        "url":  "https://www.gtabase.com/missions/gta-online/heists/the-kortz-center-heist",
+                        "scope":  "Primary payout, weekly multiplier, hard mode and Elite Challenge",
+                        "id":  "gtabase"
+                    },
+                    {
+                        "name":  "GTA BOOM â€” Scope Out Guide",
+                        "url":  "https://www.gtaboom.com/kortz-center-heist-complete-scope-out-guide-d88b",
+                        "scope":  "Buyer Request List, bonus and solo restrictions",
+                        "id":  "gtaboom"
+                    },
+                    {
+                        "name":  "Steam Community â€” Kortz Center Guide",
+                        "url":  "https://steamcommunity.com/sharedfiles/filedetails/?id=3765266788",
+                        "scope":  "Initial target-value and bag-fill table",
+                        "id":  "steam-community"
+                    },
+                    {
+                        "name":  "GTA Guide â€” Heist Payouts Update",
+                        "url":  "https://gta.guide/article/heist-payouts-update",
+                        "scope":  "Weekly multiplier and primary-payout range",
+                        "id":  "gta-guide"
+                    },
+                    {
+                        "id":  "beebom",
+                        "name":  "Beebom â€” All Kortz Center Targets and Payouts",
+                        "url":  "https://beebom.com/gta-online-kortz-center-heist-targets/",
+                        "scope":  "Secondary-target names and locations; some values are treated cautiously because of apparent tenfold typos"
+                    },
+                    {
+                        "id":  "qm-games",
+                        "name":  "QM Games â€” All Secondary Targets Locations",
+                        "url":  "https://quoramarketing.com/all-secondary-targets-locations-in-kortz-center-heist-in-gta-5-online/",
+                        "scope":  "Additional target variants and initial values"
+                    }
+                ]
 }
