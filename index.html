@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Optimize Kortz Center Heist loot for crews of 1–4 players in GTA Online.">
 
   <title>Kortz Center Heist Calculator – GTA Online Loot Optimizer</title>
-  <link rel="stylesheet" href="./css/style.css?v=6.4.0">
+  <link rel="stylesheet" href="./css/style.css?v=6.8.0">
 
   <script type="application/ld+json">
   {
@@ -48,6 +48,7 @@
       <p>Created by: <a href="https://github.com/Blamp26" target="_blank" rel="noreferrer">Blamp26</a></p>
       <p>Issues &amp; feedback: <a href="https://github.com/Blamp26/kortz-center-heist-calculator/issues" target="_blank" rel="noreferrer">GitHub</a></p>
       <p><button id="sourcesButton" class="text-link">Data sources</button></p>
+      <p id="imageLibraryStatus" class="image-library-status">Image library: checking…</p>
 
       <div class="how-to">
         <strong>How to use</strong>
@@ -82,6 +83,15 @@
       </div>
 
       <div id="primaryTargetHint" class="target-hint"></div>
+
+      <div id="primaryPreview" class="target-preview is-empty">
+        <div class="target-preview-image-wrap" hidden><img id="primaryPreviewImage" class="target-preview-image" alt=""></div>
+        <div class="target-preview-body">
+          <strong id="primaryPreviewTitle">Primary target image</strong>
+          <p id="primaryPreviewText">No approved local image yet.</p>
+          <p id="primaryPreviewMeta" class="preview-meta"></p>
+        </div>
+      </div>
 
       <div class="field-row">
         <label for="primaryValue">Repeat-sale value:</label>
@@ -133,6 +143,15 @@
       </div>
 
       <div id="targetHint" class="target-hint"></div>
+
+      <div id="pickerPreview" class="target-preview is-empty">
+        <div class="target-preview-image-wrap" hidden><img id="pickerPreviewImage" class="target-preview-image" alt=""></div>
+        <div class="target-preview-body">
+          <strong id="pickerPreviewTitle">Scoped target image</strong>
+          <p id="pickerPreviewText">No approved local image yet.</p>
+          <p id="pickerPreviewMeta" class="preview-meta"></p>
+        </div>
+      </div>
 
       <div class="field-row">
         <label for="addValue">Value shown by Raf:</label>
@@ -250,6 +269,6 @@
     <ul id="sourcesList" class="sources-list"></ul>
   </dialog>
 
-  <script type="module" src="./js/app.js?v=6.4.0"></script>
+  <script type="module" src="./js/app.js?v=6.8.0"></script>
 </body>
 </html>

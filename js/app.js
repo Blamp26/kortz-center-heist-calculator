@@ -1,8 +1,8 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.4.0';
-const state = { data: null };
+const UI_VERSION = '6.8.0';
+const state = { data: null, imageManifest: null };
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -16,6 +16,78 @@ function elementValue(selector) {
 }
 
 const boolValue = (selector) => elementValue(selector) === 'true';
+
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function getPrimaryImageEntry(id) {
+  return state.imageManifest?.primaryTargets?.[id] || null;
+}
+
+function getSecondaryImageEntry(id) {
+  return state.imageManifest?.secondaryTargets?.[id] || null;
+}
+
+function hasApprovedImage(entry) {
+  return Boolean(entry && entry.image && entry.status === 'approved');
+}
+
+function previewMetaText(entry) {
+  if (!entry) return '';
+  const parts = [];
+  if (entry.status) parts.push(`Status: ${entry.status}`);
+  if (entry.timestamp) parts.push(`Source time: ${entry.timestamp}`);
+  return parts.join(' · ');
+}
+
+function renderPreview(baseId, title, description, entry) {
+  const box = document.getElementById(baseId);
+  if (!box) return;
+  const imgWrap = document.getElementById(`${baseId}Image`).parentElement;
+  const img = document.getElementById(`${baseId}Image`);
+  const titleNode = document.getElementById(`${baseId}Title`);
+  const textNode = document.getElementById(`${baseId}Text`);
+  const metaNode = document.getElementById(`${baseId}Meta`);
+
+  titleNode.textContent = title;
+  textNode.textContent = description;
+  metaNode.textContent = previewMetaText(entry);
+
+  if (hasApprovedImage(entry)) {
+    img.src = entry.image;
+    img.alt = title;
+    imgWrap.hidden = false;
+    box.classList.remove('is-empty');
+  } else {
+    img.removeAttribute('src');
+    img.alt = '';
+    imgWrap.hidden = true;
+    box.classList.add('is-empty');
+  }
+}
+
+function imageThumbMarkup(entry, alt) {
+  if (!hasApprovedImage(entry)) return '';
+  return `<img class="target-thumb" src="${escapeHtml(entry.image)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">`;
+}
+
+function updateImageLibraryStatus() {
+  const node = document.getElementById('imageLibraryStatus');
+  if (!node || !state.imageManifest) return;
+  const allEntries = [
+    ...Object.values(state.imageManifest.primaryTargets || {}),
+    ...Object.values(state.imageManifest.secondaryTargets || {}),
+  ].filter((entry) => entry.status !== 'placeholder');
+  const approved = allEntries.filter((entry) => entry.status === 'approved' && entry.image).length;
+  node.textContent = `Image library: ${approved}/${allEntries.length} approved local files`;
+}
 
 function normalizeSearch(value) {
   return String(value || '')
@@ -134,6 +206,7 @@ function syncPrimaryTarget({ overwriteValue = true } = {}) {
     ? `Current repeat-sale value ${money(currentValue)} · first weekly sale ${money(currentValue * state.data.meta.defaultPrimary.weeklyMultiplier)}.`
     : 'Enter the repeat-sale value shown on your planning board.';
   $('#primaryTargetHint').textContent = `${valueText} ${target.note || ''}`.trim();
+  renderPreview('primaryPreview', target.name, target.note || 'No approved local image yet.', getPrimaryImageEntry(target.id));
 }
 
 function collectSettings() {
@@ -181,8 +254,13 @@ function createSelectedRow(item, itemState = {}) {
   row.dataset.defaultValue = String(item.value);
   row.innerHTML = `
     <td class="item-cell">
-      <strong>${item.name}</strong>
-      <span>${category.label} · ${category.bagPercent}% bag · ${item.location}</span>
+      <div class="item-flex">
+        ${imageThumbMarkup(getSecondaryImageEntry(item.id), item.name)}
+        <div>
+          <strong>${item.name}</strong>
+          <span>${category.label} · ${category.bagPercent}% bag · ${item.location}</span>
+        </div>
+      </div>
     </td>
     <td><input data-field="value" type="number" min="0" step="500" value="${itemState.value ?? item.value}" aria-label="Value of ${item.name}"></td>
     <td><input class="quantity" data-field="quantity" type="number" min="1" max="4" step="1" value="${itemState.quantity ?? 1}" aria-label="Amount of ${item.name}"></td>
@@ -278,6 +356,7 @@ function updateTargetHint({ overwriteValue = true } = {}) {
   const item = state.data.items.find((entry) => entry.id === $('#addTarget').value);
   if (!item) {
     $('#targetHint').textContent = 'No targets match the current search and category filter.';
+    renderPreview('pickerPreview', 'Scoped target image', 'No approved local image yet.', null);
     if (overwriteValue) $('#addValue').value = '0';
     return;
   }
@@ -287,6 +366,7 @@ function updateTargetHint({ overwriteValue = true } = {}) {
     ? ` · observed ${money(item.valueRange[0])}–${money(item.valueRange[1])}`
     : '';
   $('#targetHint').textContent = `${category.bagPercent}% of one bag · estimate ${money(item.value)}${range} · ${item.location}`;
+  renderPreview('pickerPreview', item.name, `${category.label} · ${category.bagPercent}% bag · ${item.location}`, getSecondaryImageEntry(item.id));
 }
 
 function renderCategoryReference(data) {
@@ -349,6 +429,7 @@ function renderRecommendation(optimization) {
     const bagUnits = (totalBagPercent / 100).toFixed(2);
     const li = document.createElement('li');
     li.innerHTML = `
+      ${imageThumbMarkup(getSecondaryImageEntry(item.id), item.name)}
       <span class="route-count">${item.count}×</span>
       <span class="route-name"> ${item.name}</span>
       <span class="route-meta"> — ${bagUnits} bags · ${money(item.value * item.count)}</span>
@@ -519,9 +600,15 @@ function bindEvents() {
 async function init() {
   try {
     if (!ensureCurrentInterface()) return;
-    const response = await fetch(`./data/loot.json?v=${UI_VERSION}`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.data = await response.json();
+    const [lootResponse, imageManifestResponse] = await Promise.all([
+      fetch(`./data/loot.json?v=${UI_VERSION}`, { cache: 'no-store' }),
+      fetch(`./data/image-manifest.json?v=${UI_VERSION}`, { cache: 'no-store' }),
+    ]);
+    if (!lootResponse.ok) throw new Error(`HTTP ${lootResponse.status}`);
+    if (!imageManifestResponse.ok) throw new Error(`HTTP ${imageManifestResponse.status}`);
+    state.data = await lootResponse.json();
+    state.imageManifest = await imageManifestResponse.json();
+    updateImageLibraryStatus();
     renderPrimaryTargets(state.data);
     renderPicker(state.data);
     renderCategoryReference(state.data);

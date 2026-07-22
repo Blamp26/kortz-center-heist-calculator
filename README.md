@@ -47,3 +47,13 @@ This is an unofficial fan-made project and is not affiliated with Rockstar Games
 ## License
 
 MIT. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Local target image workflow
+
+Target images are stored as local project files, not external links.
+
+- Place approved files under `assets/images/targets/`
+- Register each file in `data/image-manifest.json`
+- Only set `status` to `approved` after the image has been manually verified
+
+The UI will automatically show local previews and thumbnails when an approved image path exists in the manifest.

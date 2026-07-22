@@ -1,0 +1,484 @@
+{
+  "version": "1.0.0",
+  "notes": "Local image manifest for manually approved target images. Only add a file path after the image has been verified for quality and identity.",
+  "primaryTargets": {
+    "la-derniere-debauche": {
+      "name": "La Dernière Débauche",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/primary/la-derniere-debauche.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "the-downfall-of-rome": {
+      "name": "The Downfall of Rome",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/primary/the-downfall-of-rome.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "outcome-of-endeavour": {
+      "name": "The Outcome of Endeavour",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/primary/outcome-of-endeavour.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "other-weekly-target": {
+      "name": "Other weekly painting",
+      "image": "",
+      "status": "placeholder",
+      "suggestedPath": "",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Technical placeholder for unknown future weekly paintings. Leave without an image."
+    }
+  },
+  "secondaryTargets": {
+    "canis-hominem-edit": {
+      "name": "Canis Hominem Edit",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/canis-hominem-edit.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "cooked": {
+      "name": "Cooked",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/cooked.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "do-you-see-me": {
+      "name": "Do You See Me",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/do-you-see-me.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "dont-forgo-blueprints": {
+      "name": "Don't Forgo These Blueprints",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/dont-forgo-blueprints.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "explain-yourself": {
+      "name": "Explain Yourself",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/explain-yourself.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "het-gouden-hondje": {
+      "name": "Het Gouden Hondje",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/het-gouden-hondje.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "la-duchesse": {
+      "name": "La Duchesse",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/la-duchesse.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "orange-crush": {
+      "name": "Orange Crush",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/orange-crush.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "sod-off": {
+      "name": "Sod Off",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/sod-off.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "swingset-study-lxix": {
+      "name": "Swingset Study No. LXIX",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/swingset-study-lxix.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "the-chief": {
+      "name": "The Chief",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/the-chief.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "great-circle-back": {
+      "name": "The Great Circle Back",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/great-circle-back.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "hunter-becomes-hunted": {
+      "name": "The Hunter Becomes the Hunted",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/hunter-becomes-hunted.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "with-friends-like-these": {
+      "name": "With Friends Like These",
+      "category": "painting",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/paintings/with-friends-like-these.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "antique-bands": {
+      "name": "Antique Bands",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/antique-bands.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "antique-rings": {
+      "name": "Antique Rings",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/antique-rings.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "art-deco-circlets": {
+      "name": "Art Deco Circlets",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/art-deco-circlets.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "art-deco-rings": {
+      "name": "Art Deco Rings",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/art-deco-rings.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "byzantine-hoops": {
+      "name": "Byzantine Hoops",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/byzantine-hoops.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "coquard-bracelets": {
+      "name": "Coquard Bracelets",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/coquard-bracelets.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "coquard-bracelet": {
+      "name": "Coquard Rings",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/coquard-bracelet.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "fertility-bronze": {
+      "name": "Fertility Statue (Bronze)",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/fertility-bronze.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "fertility-gold": {
+      "name": "Fertility Statue (Gold)",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/fertility-gold.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "fertility-ivory": {
+      "name": "Fertility Statue (Ivory)",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/fertility-ivory.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "fertility-silver": {
+      "name": "Fertility Statue (Silver)",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/fertility-silver.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "meteorite-fragment": {
+      "name": "Meteorite Fragment",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/meteorite-fragment.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "pharaonic-bangles": {
+      "name": "Pharaonic Bangles",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/pharaonic-bangles.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "venus-ivory": {
+      "name": "Venus d’Algernon (Ivory)",
+      "category": "small",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/small-exhibits/venus-ivory.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "dragon-egg": {
+      "name": "Dragon Egg Coquard",
+      "category": "egg",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/coquard-eggs/dragon-egg.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "forest-egg": {
+      "name": "Forest Egg Coquard",
+      "category": "egg",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/coquard-eggs/forest-egg.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "oeuf-coquard": {
+      "name": "Œuf de Coquard",
+      "category": "egg",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/coquard-eggs/oeuf-coquard.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "oeuf-des-abimes": {
+      "name": "Œuf de Coquard des abîmes",
+      "category": "egg",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/coquard-eggs/oeuf-des-abimes.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "oeuf-decoratif": {
+      "name": "Œuf de Coquard décoratif",
+      "category": "egg",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/coquard-eggs/oeuf-decoratif.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "oeuf-enchante": {
+      "name": "Œuf de Coquard enchanté",
+      "category": "egg",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/coquard-eggs/oeuf-enchante.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "algernons-venus": {
+      "name": "Algernon's Venus",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/algernons-venus.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "aquamarine": {
+      "name": "Aquamarine Gemstone",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/aquamarine.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "coquard-carcanet-sapphire": {
+      "name": "Coquard Carcanet (Sapphire)",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/coquard-carcanet-sapphire.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "coquard-carcanet-tanzanite": {
+      "name": "Coquard Carcanet (Tanzanite)",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/coquard-carcanet-tanzanite.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "memento-amethyst": {
+      "name": "Memento Non Mori (Amethyst)",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/memento-amethyst.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "memento-diamond": {
+      "name": "Memento Non Mori (Diamond)",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/memento-diamond.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "memento-emerald": {
+      "name": "Memento Non Mori (Emerald)",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/memento-emerald.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "perlino-andalusian": {
+      "name": "Perlino Andalusian",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/perlino-andalusian.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "purple-sapphire": {
+      "name": "Purple Sapphire",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/purple-sapphire.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    },
+    "yellow-topaz": {
+      "name": "Yellow Topaz Gemstone",
+      "category": "glass",
+      "image": "",
+      "status": "missing",
+      "suggestedPath": "./assets/images/targets/secondary/reinforced-displays/yellow-topaz.webp",
+      "sourceVideo": "",
+      "timestamp": "",
+      "notes": "Fill after manually approving a high-quality local image."
+    }
+  }
+}
