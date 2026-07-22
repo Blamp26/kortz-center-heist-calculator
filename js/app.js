@@ -1,7 +1,7 @@
 import { calculatePrimary, optimizeLoot, calculateSummary, money } from './calculator-core.js';
 
 const STORAGE_KEY = 'kortz-center-calculator:v3';
-const UI_VERSION = '6.11.0';
+const UI_VERSION = '6.11.1';
 const state = { data: null, imageManifest: null };
 
 const $ = (selector) => document.querySelector(selector);
@@ -57,6 +57,20 @@ function renderPreview(baseId, title, description, entry) {
   metaNode.textContent = previewMetaText(entry);
 
   if (hasApprovedImage(entry)) {
+    img.onerror = () => {
+      img.removeAttribute('src');
+      img.alt = '';
+      imgWrap.hidden = true;
+      delete imgWrap.dataset.imageSrc;
+      delete imgWrap.dataset.imageTitle;
+      delete imgWrap.dataset.imageMeta;
+      box.classList.add('is-empty');
+      textNode.textContent = 'The image entry exists, but the local file could not be loaded.';
+      metaNode.textContent = 'Missing local image file';
+    };
+    img.onload = () => {
+      img.onerror = null;
+    };
     img.src = entry.image;
     img.alt = title;
     imgWrap.hidden = false;
@@ -89,7 +103,7 @@ function imageThumbMarkup(entry, alt) {
       aria-label="Enlarge image of ${escapeHtml(alt)}"
       title="Click to enlarge"
     >
-      <img class="target-thumb" src="${escapeHtml(entry.image)}" alt="" loading="lazy" decoding="async">
+      <img class="target-thumb" src="${escapeHtml(entry.image)}" alt="" loading="lazy" decoding="async" onerror="this.closest('button').remove()">
     </button>`;
 }
 
