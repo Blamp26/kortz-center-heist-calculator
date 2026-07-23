@@ -1,7 +1,7 @@
 {
     "meta":  {
                  "title":  "Kortz Center Heist Calculator",
-                 "updated":  "2026-07-22",
+                 "updated":  "2026-07-24",
                  "bagCapacityPerPlayer":  100,
                  "buyerRequestBonus":  50000,
                  "eliteBonus":  {
@@ -254,14 +254,16 @@
                       "category":  "painting",
                       "value":  145000,
                       "location":  "Gallery",
-                      "sourceConfidence":  "guide",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
-                                        "steam-community"
+                                        "steam-community",
+                                        "user-photo-batch-2026-07-24"
                                     ],
                       "gxtLabel":  "KH_LOOT_PANTC",
                       "gxtHash":  "0A8AEEE3",
                       "internalItemHash":  "0086953D",
-                      "scriptVerified":  true
+                      "scriptVerified":  true,
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority."
                   },
                   {
                       "id":  "hunter-becomes-hunted",
@@ -312,16 +314,18 @@
                       "id":  "antique-rings",
                       "name":  "Antique Rings",
                       "category":  "small",
-                      "value":  34000,
+                      "value":  30000,
                       "location":  "Gallery",
-                      "sourceConfidence":  "guide",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
-                                        "steam-community"
+                                        "steam-community",
+                                        "user-photo-batch-2026-07-24"
                                     ],
                       "gxtLabel":  "KH_LOOT_RINGC",
                       "gxtHash":  "C89D0F0F",
                       "internalItemHash":  "89415716",
-                      "scriptVerified":  true
+                      "scriptVerified":  true,
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority."
                   },
                   {
                       "id":  "art-deco-circlets",
@@ -390,12 +394,13 @@
                       "id":  "coquard-bracelet",
                       "name":  "Coquard Rings",
                       "category":  "small",
-                      "value":  31000,
+                      "value":  35000,
                       "location":  "First Floor Gallery",
-                      "sourceConfidence":  "guide",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
                                         "steam-community",
-                                        "beebom"
+                                        "beebom",
+                                        "user-photo-batch-2026-07-24"
                                     ],
                       "aliases":  [
                                       "coquard bracelet",
@@ -404,7 +409,8 @@
                       "gxtLabel":  "KH_LOOT_RINGA",
                       "gxtHash":  "EB22D41A",
                       "internalItemHash":  "45FBC4FC",
-                      "scriptVerified":  true
+                      "scriptVerified":  true,
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority."
                   },
                   {
                       "id":  "fertility-bronze",
@@ -476,13 +482,14 @@
                       "category":  "small",
                       "value":  56000,
                       "location":  "Gallery",
-                      "sourceConfidence":  "variable",
+                      "sourceConfidence":  "observed",
                       "valueRange":  [
                                          56000,
                                          82000
                                      ],
                       "sourceIds":  [
-                                        "steam-community"
+                                        "steam-community",
+                                        "user-photo-batch-2026-07-24"
                                     ],
                       "aliases":  [
                                       "fertility silver",
@@ -491,7 +498,8 @@
                       "gxtLabel":  "KH_LOOT_IDOLC",
                       "gxtHash":  "520181F4",
                       "internalItemHash":  "A7CBFA74",
-                      "scriptVerified":  true
+                      "scriptVerified":  true,
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority."
                   },
                   {
                       "id":  "meteorite-fragment",
@@ -628,16 +636,16 @@
                       "id":  "forest-coquard-egg",
                       "name":  "Œuf de Coquard forestier",
                       "category":  "egg",
-                      "value":  0,
+                      "value":  64000,
                       "location":  "Gallery",
-                      "sourceConfidence":  "script-verified-name",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
-
+                                        "user-photo-batch-2026-07-24"
                                     ],
                       "aliases":  [
                                       "Forest Coquard Egg"
                                   ],
-                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_OEGGG / FEE3ECDC. Enter Raf’s in-game value.",
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority.",
                       "gxtLabel":  "KH_LOOT_OEGGG",
                       "gxtHash":  "1AA9C988",
                       "internalItemHash":  "FEE3ECDC",
@@ -810,13 +818,13 @@
                       "id":  "emerald-gemstone",
                       "name":  "Emerald Gemstone",
                       "category":  "glass",
-                      "value":  0,
+                      "value":  120000,
                       "location":  "Display case",
-                      "sourceConfidence":  "script-verified-name",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
-
+                                        "user-photo-batch-2026-07-24"
                                     ],
-                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_JEWLA / 435FD804. Enter Raf’s in-game value.",
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority.",
                       "gxtLabel":  "KH_LOOT_JEWLA",
                       "gxtHash":  "406CC767",
                       "internalItemHash":  "435FD804",
@@ -826,13 +834,13 @@
                       "id":  "gold-turkoman",
                       "name":  "Gold Turkoman",
                       "category":  "glass",
-                      "value":  0,
+                      "value":  87500,
                       "location":  "Display case",
-                      "sourceConfidence":  "script-verified-name",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
-
+                                        "user-photo-batch-2026-07-24"
                                     ],
-                      "note":  "Name verified in fm_content_kortz_scoping.ysc: KH_LOOT_HORSC / 37176C54. Enter Raf’s in-game value.",
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority.",
                       "gxtLabel":  "KH_LOOT_HORSC",
                       "gxtHash":  "475272CE",
                       "internalItemHash":  "37176C54",
@@ -914,11 +922,12 @@
                       "id":  "memento-emerald",
                       "name":  "Memento Non Mori (Emerald)",
                       "category":  "glass",
-                      "value":  77500,
+                      "value":  80000,
                       "location":  "Display case",
-                      "sourceConfidence":  "guide",
+                      "sourceConfidence":  "observed",
                       "sourceIds":  [
-                                        "steam-community"
+                                        "steam-community",
+                                        "user-photo-batch-2026-07-24"
                                     ],
                       "aliases":  [
                                       "momento non mori emerald",
@@ -927,7 +936,8 @@
                       "gxtLabel":  "KH_LOOT_SKLLA",
                       "gxtHash":  "7B78C67E",
                       "internalItemHash":  "0EF43EB9",
-                      "scriptVerified":  true
+                      "scriptVerified":  true,
+                      "note":  "Value observed in the submitted in-game image. Secondary-target payouts may vary between runs; Raf\u0027s displayed value still takes priority."
                   },
                   {
                       "id":  "memento-gold",

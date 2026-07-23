@@ -1,5 +1,5 @@
 {
-    "version":  "1.1.0",
+    "version":  "1.2.0",
     "notes":  "Local image manifest for the script-verified 64-target pool. Only add a file path after the image has been verified for quality and identity.",
     "primaryTargets":  {
                            "la-derniere-debauche":  {
@@ -153,12 +153,12 @@
                              "great-circle-back":  {
                                                        "name":  "The Great Circle Back",
                                                        "category":  "painting",
-                                                       "image":  "",
-                                                       "status":  "missing",
+                                                       "image":  "./assets/images/targets/secondary/paintings/great-circle-back.webp",
+                                                       "status":  "approved",
                                                        "suggestedPath":  "./assets/images/targets/secondary/paintings/great-circle-back.webp",
-                                                       "sourceVideo":  "",
-                                                       "timestamp":  "",
-                                                       "notes":  "Fill after manually approving a high-quality local image."
+                                                       "sourceVideo":  "User-submitted local photo batch",
+                                                       "timestamp":  "2026-07-24",
+                                                       "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                    },
                              "hunter-becomes-hunted":  {
                                                            "name":  "The Hunter Becomes the Hunted",
@@ -193,12 +193,12 @@
                              "antique-rings":  {
                                                    "name":  "Antique Rings",
                                                    "category":  "small",
-                                                   "image":  "",
-                                                   "status":  "missing",
+                                                   "image":  "./assets/images/targets/secondary/small-exhibits/antique-rings.webp",
+                                                   "status":  "approved",
                                                    "suggestedPath":  "./assets/images/targets/secondary/small-exhibits/antique-rings.webp",
-                                                   "sourceVideo":  "",
-                                                   "timestamp":  "",
-                                                   "notes":  "Fill after manually approving a high-quality local image."
+                                                   "sourceVideo":  "User-submitted local photo batch",
+                                                   "timestamp":  "2026-07-24",
+                                                   "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                },
                              "art-deco-circlets":  {
                                                        "name":  "Art Deco Circlets",
@@ -243,12 +243,12 @@
                              "coquard-bracelet":  {
                                                       "name":  "Coquard Rings",
                                                       "category":  "small",
-                                                      "image":  "",
-                                                      "status":  "missing",
+                                                      "image":  "./assets/images/targets/secondary/small-exhibits/coquard-bracelet.webp",
+                                                      "status":  "approved",
                                                       "suggestedPath":  "./assets/images/targets/secondary/small-exhibits/coquard-bracelet.webp",
-                                                      "sourceVideo":  "",
-                                                      "timestamp":  "",
-                                                      "notes":  "Fill after manually approving a high-quality local image."
+                                                      "sourceVideo":  "User-submitted local photo batch",
+                                                      "timestamp":  "2026-07-24",
+                                                      "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                   },
                              "fertility-bronze":  {
                                                       "name":  "Fertility Statue (Bronze)",
@@ -293,12 +293,12 @@
                              "fertility-silver":  {
                                                       "name":  "Fertility Statue (Silver)",
                                                       "category":  "small",
-                                                      "image":  "",
-                                                      "status":  "missing",
+                                                      "image":  "./assets/images/targets/secondary/small-exhibits/fertility-silver.webp",
+                                                      "status":  "approved",
                                                       "suggestedPath":  "./assets/images/targets/secondary/small-exhibits/fertility-silver.webp",
-                                                      "sourceVideo":  "",
-                                                      "timestamp":  "",
-                                                      "notes":  "Fill after manually approving a high-quality local image."
+                                                      "sourceVideo":  "User-submitted local photo batch",
+                                                      "timestamp":  "2026-07-24",
+                                                      "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                   },
                              "meteorite-fragment":  {
                                                         "name":  "Meteorite Fragment",
@@ -373,12 +373,12 @@
                              "forest-coquard-egg":  {
                                                         "name":  "Œuf de Coquard forestier",
                                                         "category":  "egg",
-                                                        "image":  "",
-                                                        "status":  "missing",
+                                                        "image":  "./assets/images/targets/secondary/coquard-eggs/forest-coquard-egg.webp",
+                                                        "status":  "approved",
                                                         "suggestedPath":  "./assets/images/targets/secondary/coquard-eggs/forest-coquard-egg.webp",
-                                                        "sourceVideo":  "",
-                                                        "timestamp":  "",
-                                                        "notes":  "Script-verified target. Fill after manually approving a high-quality local image."
+                                                        "sourceVideo":  "User-submitted local photo batch",
+                                                        "timestamp":  "2026-07-24",
+                                                        "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                     },
                              "oeuf-coquard":  {
                                                   "name":  "Œuf de Coquard royal",
@@ -483,22 +483,22 @@
                              "emerald-gemstone":  {
                                                       "name":  "Emerald Gemstone",
                                                       "category":  "glass",
-                                                      "image":  "",
-                                                      "status":  "missing",
+                                                      "image":  "./assets/images/targets/secondary/reinforced-displays/emerald-gemstone.webp",
+                                                      "status":  "approved",
                                                       "suggestedPath":  "./assets/images/targets/secondary/reinforced-displays/emerald-gemstone.webp",
-                                                      "sourceVideo":  "",
-                                                      "timestamp":  "",
-                                                      "notes":  "Script-verified target. Fill after manually approving a high-quality local image."
+                                                      "sourceVideo":  "User-submitted local photo batch",
+                                                      "timestamp":  "2026-07-24",
+                                                      "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                   },
                              "gold-turkoman":  {
                                                    "name":  "Gold Turkoman",
                                                    "category":  "glass",
-                                                   "image":  "",
-                                                   "status":  "missing",
+                                                   "image":  "./assets/images/targets/secondary/reinforced-displays/gold-turkoman.webp",
+                                                   "status":  "approved",
                                                    "suggestedPath":  "./assets/images/targets/secondary/reinforced-displays/gold-turkoman.webp",
-                                                   "sourceVideo":  "",
-                                                   "timestamp":  "",
-                                                   "notes":  "Script-verified target. Fill after manually approving a high-quality local image."
+                                                   "sourceVideo":  "User-submitted local photo batch",
+                                                   "timestamp":  "2026-07-24",
+                                                   "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                },
                              "gray-spinel-gemstone":  {
                                                           "name":  "Gray Spinel Gemstone",
@@ -543,12 +543,12 @@
                              "memento-emerald":  {
                                                      "name":  "Memento Non Mori (Emerald)",
                                                      "category":  "glass",
-                                                     "image":  "",
-                                                     "status":  "missing",
+                                                     "image":  "./assets/images/targets/secondary/reinforced-displays/memento-emerald.webp",
+                                                     "status":  "approved",
                                                      "suggestedPath":  "./assets/images/targets/secondary/reinforced-displays/memento-emerald.webp",
-                                                     "sourceVideo":  "",
-                                                     "timestamp":  "",
-                                                     "notes":  "Fill after manually approving a high-quality local image."
+                                                     "sourceVideo":  "User-submitted local photo batch",
+                                                     "timestamp":  "2026-07-24",
+                                                     "notes":  "User-submitted in-game capture, overlay removed and crop optimized for local preview."
                                                  },
                              "memento-gold":  {
                                                   "name":  "Memento Non Mori (Gold)",
